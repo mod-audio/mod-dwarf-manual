@@ -1,0 +1,104 @@
+site_name: MOD Dwarf Manual
+site_url: https://docs.mod.audio/dwarf/
+repo_url: https://github.com/mod-audio/mod-dwarf-manual
+repo_name: mod-audio/mod-dwarf-manual
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: black
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.tooltips
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: false
+      fallback_to_build_date: true
+
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mod-audio
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@modaudio
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Unboxing & Safety: getting-started/unboxing-safety.md
+      - Connecting Your Dwarf: getting-started/connecting.md
+      - Powering On & First Sound: getting-started/first-sound.md
+  - Your First Pedalboard:
+      - Accessing the Web UI: first-pedalboard/web-ui-access.md
+      - Building a Pedalboard: first-pedalboard/building.md
+      - Assigning Controls: first-pedalboard/assigning-controls.md
+      - Snapshots: first-pedalboard/snapshots.md
+  - Playing Live:
+      - Device Concepts & Modes: playing-live/concepts-modes.md
+      - Controls Overview: playing-live/controls-overview.md
+      - Navigation Mode: playing-live/navigation-mode.md
+      - Tool Mode - Tuner & Tempo: playing-live/tool-mode.md
+      - LED Meters: playing-live/led-meters.md
+  - Working with Pedalboards & Snapshots:
+      - Organizing Banks: pedalboards-snapshots/banks.md
+      - Managing Snapshots: pedalboards-snapshots/managing-snapshots.md
+      - Drag & Replace Plugin: pedalboards-snapshots/drag-replace.md
+      - Backup & Restore: pedalboards-snapshots/backup-restore.md
+  - Connecting Gear:
+      - MIDI Controllers & Expression Pedals: connecting-gear/midi-expression.md
+      - Control Chain Devices: connecting-gear/control-chain.md
+      - Bluetooth: connecting-gear/bluetooth.md
+      - USB Host Devices: connecting-gear/usb-host.md
+  - Settings & Configuration:
+      - Audio I/O & Headphone: settings/audio-io.md
+      - MIDI Settings: settings/midi.md
+      - Menu Items: settings/menu-items.md
+      - User Profiles: settings/user-profiles.md
+  - Updating & Maintaining:
+      - Installing OS Updates: maintaining/os-updates.md
+      - Backing Up Before You Update: maintaining/backups.md
+      - Troubleshooting: maintaining/troubleshooting.md
+      - Factory Reset & Reinstall: maintaining/factory-reset.md
+  - Reference:
+      - Technical Specifications: reference/tech-specs.md
+      - MIDI Implementation: reference/midi-implementation.md
+      - Glossary: reference/glossary.md
+      - Safety & Compliance: reference/safety-compliance.md
