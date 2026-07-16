@@ -26,3 +26,9 @@ Pushes to `main` build and deploy automatically via GitHub Actions (`.github/wor
 ## Maintenance
 
 This manual is updated as part of each Dwarf OS release checklist — content and screenshots should be reviewed for accuracy against the release's actual changes before publishing.
+
+## Toolchain note
+
+MkDocs 1.x (the version this site is built on) is unmaintained upstream, and MkDocs 2.0 — a separate, incompatible rewrite with no plugin system — is in pre-release from a different maintainer. The Material for MkDocs team (whose theme and plugins this site depends on) has forked their own path forward as [Zensical](https://zensical.org), aiming for drop-in compatibility with existing `mkdocs.yml` projects like this one.
+
+`requirements.txt` pins `mkdocs<2` so builds won't silently break. No action needed now — this is written down so whoever picks up maintenance later knows why, and can evaluate switching the build engine to Zensical once it's stable, without needing to restructure the content.
