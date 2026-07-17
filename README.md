@@ -17,7 +17,7 @@ Open http://127.0.0.1:8000 to preview.
 
 - `docs/` — all manual content, organized by user journey (Getting Started, Your First Pedalboard, Playing Live, etc.) rather than by device vs. Web UI.
 - `mkdocs.yml` — site config and navigation.
-- Pages marked with a "Status: outline stub" admonition are placeholders — see the open items in the project tracker for what's written vs. pending.
+- Pages marked with a "Needs SME confirmation" or "Pending implementation" admonition have unverified or not-yet-shipped content — see `CONTRIBUTING.md`.
 
 ## Publishing
 
@@ -25,7 +25,7 @@ Pushes to `main` build and deploy automatically via GitHub Actions (`.github/wor
 
 ## Maintenance
 
-This manual is updated as part of each Dwarf OS release checklist — content and screenshots should be reviewed for accuracy against the release's actual changes before publishing.
+See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the full guide: local setup, how to edit and add pages, the writing style, image handling, and the checklist to work through on every OS release.
 
 ## Toolchain note
 
