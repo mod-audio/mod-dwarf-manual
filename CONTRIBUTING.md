@@ -1,14 +1,55 @@
-# Maintaining the MOD Dwarf Manual
+# Maintaining the MOD Dwarf Manual — A Guide for João (or Whoever's Next)
 
-This is the working guide for whoever keeps this manual up to date — written for João, but should work for anyone who picks it up after him. No prior experience with this specific toolchain assumed; basic comfort with a terminal is.
+Welcome! This document assumes you've never touched this project before. If you get stuck anywhere, that's normal — ask Gianfranco, and consider adding a note here so the next person doesn't hit the same wall.
 
-## What this is
+There are two ways to work on this manual, and you don't need to pick just one:
 
-The manual is a set of Markdown files (`docs/`) built into a website by MkDocs Material, and published automatically to GitHub Pages whenever `main` is pushed. There's no separate "publish" step — editing a file and pushing it live is the whole workflow.
+- **Easy mode** — edit files directly on the github.com website. No installs, no terminal. Best for small text fixes and adding images.
+- **Terminal mode** — work on your own computer, so you can preview your changes before anyone else sees them. Best for bigger edits, or once you're comfortable.
 
-## One-time setup
+Start with Easy mode. Move to Terminal mode whenever a change feels big enough that you'd like to double-check it first.
 
-You need Python 3 and git installed. Then, from a terminal:
+## A few words you'll run into
+
+- **Repository (or "repo")** — the project folder itself, including its full history. This one lives at `github.com/mod-audio/mod-dwarf-manual`.
+- **Markdown** — the plain-text format the manual is written in. It looks like normal text with a few symbols (`#` for a heading, `**bold**` for bold). You don't need to learn it all at once — copy the pattern from a page that already looks the way you want.
+- **Commit** — one saved change, with a short message describing what changed. Think of it like a save point.
+- **Push** — sending your commits from your computer up to github.com, where they become real.
+- **Terminal** — the text-based command window on your computer (Terminal on macOS, PowerShell/Git Bash on Windows). Only needed for Terminal mode.
+
+## Easy mode: editing text on github.com
+
+No installation needed. Do this in a web browser, while logged into GitHub.
+
+1. Go to `github.com/mod-audio/mod-dwarf-manual` and open the `docs` folder, then click through to the file you want to change (they're organized by section — `getting-started`, `playing-live`, and so on, matching the manual itself).
+2. Click the **pencil icon** (top-right of the file view) to edit it.
+3. Make your change directly in the text box. It's plain text, so just type normally.
+4. Scroll down to "Commit changes." Write a short, plain description of what you changed (e.g. "Fix typo in tuner instructions").
+5. Click "Commit directly to the `main` branch," then the green "Commit changes" button.
+
+That's it — within a minute or two, the live site updates automatically. No extra step required.
+
+## Easy mode: adding an image on github.com
+
+1. In the repo, navigate into `docs/assets/`, then into the subfolder for the relevant section (e.g. `docs/assets/playing-live/`). If the subfolder doesn't exist yet, you can create it in step 2 by typing a folder name before the file name.
+2. Click **Add file → Upload files** (top right).
+3. Drag your image in, or click to browse for it. Give it a clear, descriptive filename before uploading if you can — lowercase, words separated by dashes, like `tuner-tool-screen.png` — rather than whatever cryptic name it came with.
+4. Commit the upload the same way as a text change (see above).
+5. Now go edit the Markdown page where the image should appear (same process as above) and add this line wherever you want it to show up:
+
+   ```
+   ![Short description of the image](../assets/playing-live/tuner-tool-screen.png)
+   ```
+
+   The path starts with `../assets/` because you're linking from inside a page one folder below `docs/`. Copy the pattern from a page that already has an image if unsure. Readers can click any image to see it full-size.
+
+## Terminal mode: one-time setup
+
+Do this once, on whichever computer you'll be working from.
+
+You need two programs installed: **git** and **Python 3**. If you're not sure whether you have them, open a terminal and type `git --version` and `python3 --version` — if you see a version number back, you're set; if you see "command not found," install them first (Gianfranco or a search for "install git on Mac/Windows" will get you there).
+
+Then, in the terminal:
 
 ```bash
 git clone git@github.com:mod-audio/mod-dwarf-manual.git
@@ -18,75 +59,127 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Repeat the `source .venv/bin/activate` step every time you come back to a new terminal session — it's what makes the `mkdocs` command available.
+What this does, line by line: downloads a copy of the repo to your computer; moves your terminal into that folder; creates an isolated space for this project's tools so they don't interfere with anything else on your machine; switches into that space; installs the tools the manual needs to build a preview.
 
-## Making a change
+Every time you come back to work in a new terminal window, re-run just this one line first:
 
-1. Activate the environment (`source .venv/bin/activate`, from inside the repo folder).
-2. Open the relevant file in `docs/` and edit it — it's plain Markdown.
-3. Preview locally: `mkdocs serve`, then open `http://127.0.0.1:8000`. It live-reloads as you save.
-4. When it looks right: `git add -A`, `git commit -m "describe what changed"`, `git push`.
-5. Check the Actions tab on GitHub for a green check, then check the live site (allow a minute or two — GitHub's CDN can lag slightly behind a fresh deploy).
+```bash
+source .venv/bin/activate
+```
 
-## Adding a new page
+## Terminal mode: making a change
 
-1. Create the `.md` file in the right subfolder of `docs/` (follow the existing folder names — they map to the manual's sections).
-2. Add it to the `nav:` list in `mkdocs.yml`, in the position you want it to appear. This file is the single source of truth for the site's navigation — a page not listed here won't show up in the menu even if it exists.
-3. Give it a "Next: [...]" link at the bottom pointing to whatever page should come after it, matching the pattern used everywhere else.
+1. Make sure you've run `source .venv/bin/activate` (see above).
+2. Open the file you want to edit in any text editor (VS Code, TextEdit, whatever you're comfortable with) — it's just `docs/...` followed by the section and filename.
+3. Preview your change before anyone else sees it: run `mkdocs serve`, then open `http://127.0.0.1:8000` in your browser. The preview updates automatically each time you save the file.
+4. Once it looks right, press Ctrl+C in the terminal to stop the preview, then run these three commands:
 
-## Writing style
+   ```bash
+   git add -A
+   git commit -m "describe what you changed here"
+   git push
+   ```
 
-The manual is organized by what the reader is trying to do, not by which part of the product (device vs. Web UI) happens to be involved — a single page should walk through both where needed. A few things that keep it consistent:
+5. On github.com, click the "Actions" tab and wait for a green checkmark — that means the live site has finished updating. Then check the real site to confirm.
 
-- Write like you're explaining it to someone standing next to the Dwarf, not like a reference manual entry. Short, direct sentences.
-- Don't invent specifics you haven't verified — a wrong instruction in a hardware manual is worse than a missing one. If you're writing about something you haven't confirmed on a real unit, flag it rather than guess (see below).
-- Cross-link liberally with relative Markdown links (`../settings/audio-io.md`) instead of repeating content that lives on another page.
+## Adding a brand new page
 
-### Flagging unverified or unfinished content
+Whichever mode you're using:
 
-A few pages already use this pattern — copy it when you're in the same situation:
+1. Create the new `.md` file in the right subfolder of `docs/`.
+2. Open `mkdocs.yml` and add the new page to the `nav:` list, in the spot you want it to appear in the menu. **This step is easy to forget** — if a page isn't listed here, it won't show up on the site even though it exists.
+3. Add a line like `Next: [Page Title](../folder/file.md)` at the bottom, pointing to whatever page should logically come after it — every existing page does this.
+
+## How to write for this manual
+
+The manual is organized around what the reader is trying to do (get sound out of the box, build a pedalboard, connect gear...) rather than around the product's internal parts. A few guidelines:
+
+- Write like you're standing next to someone's Dwarf, talking them through it — short, direct sentences, not formal reference-manual language.
+- If you're not sure a detail is correct, don't guess. Flag it instead (see below) so it doesn't quietly become wrong information in a hardware manual.
+- If the same information already lives on another page, link to it (`[Settings](../settings/audio-io.md)`) instead of retyping it. Easier to keep one true copy updated than several.
+
+### Flagging something you're not sure about
+
+Copy this pattern into a page when you're documenting something you haven't personally verified:
 
 ```
 !!! warning "Needs SME confirmation"
     Explain what's unverified and who should confirm it.
 ```
 
-or for features that haven't shipped yet:
+Or for a feature that hasn't shipped yet:
 
 ```
 !!! warning "Pending implementation — content not final"
-    Explain what's speculative and what needs to be confirmed once it ships.
+    Explain what's speculative and what needs confirming once it ships.
 ```
 
-Search the repo for `Needs SME confirmation` and `Pending implementation` periodically — those are the open items waiting on someone (usually you, or Gianfranco) to verify against a real device and then delete the admonition once confirmed.
+These show up as an orange callout box on the page, so nobody mistakes it for confirmed fact. Once you've verified it against a real device, rewrite the section properly and delete the box.
 
-## Images and screenshots
+## Getting images from the old wiki
 
-- Store images under `docs/assets/`, or in a subfolder next to the page that uses them — either is fine, just keep it findable.
-- Reference them with standard Markdown: `![alt text](../assets/whatever.png)`. Clicking an image opens a lightbox automatically (no extra markup needed).
-- Keep source images reasonably high-resolution (1200px wide or more) even though the site displays them smaller — a future print/PDF export will need that headroom, and it's much easier to keep one good image than to maintain two versions.
-- Screenshots go stale the moment the Web UI changes. There's no automatic check for this — it's a manual judgment call each release (see below).
+The old wiki (`wiki.mod.audio`) has plenty of existing photos and diagrams of the Dwarf that are perfectly reusable here — no need to take new ones from scratch for things that haven't changed.
+
+One thing to know: don't just copy the image's web address and link straight to the wiki. Save a real copy and upload it into this repo instead (see "adding an image" above). If the wiki page ever gets edited or reorganized, a linked image can silently disappear from this manual — a copy here can't.
+
+**Getting the best-quality version:** wiki image pages usually show you a shrunk-down preview. To get the full-size original, look at the image's web address — it'll look something like this:
+
+```
+https://wiki.mod.audio/images/thumb/b/b1/Dwarf_FrontPanel.png/500px-Dwarf_FrontPanel.png
+```
+
+Delete the `thumb/` part and the `500px-` part, and you get the original full-size file:
+
+```
+https://wiki.mod.audio/images/b/b1/Dwarf_FrontPanel.png
+```
+
+Open that address in your browser, right-click the image, and save it — that's the file to upload.
+
+### First batch to get started
+
+These are good starting images, already identified from the wiki, ready to pull in. Each row is: what it is → where to get the full-size original → suggested filename and folder → which manual page to add it to.
+
+| Image | Full-size URL | Save as | Add to page |
+|---|---|---|---|
+| Dwarf front panel photo | `wiki.mod.audio/images/b/b1/Dwarf_FrontPanel.png` | `docs/assets/getting-started/dwarf-front-panel.png` | `getting-started/connecting.md` |
+| Device overview wireframe | `wiki.mod.audio/images/0/0a/Dwarf_UsageOverview.png` | `docs/assets/getting-started/dwarf-overview.png` | `getting-started/connecting.md` |
+| Back panel connections overview | `wiki.mod.audio/images/4/4e/Dwarf_ConnectionsOverview.png` | `docs/assets/getting-started/dwarf-connections-overview.png` | `getting-started/connecting.md` |
+| Actuators diagram (knobs/buttons/footswitches) | `wiki.mod.audio/images/2/26/Dwarf_Actuators.png` | `docs/assets/playing-live/dwarf-actuators.png` | `playing-live/controls-overview.md` |
+| Concepts & Modes diagram | `wiki.mod.audio/images/1/13/Concepts_and_Modes.png` | `docs/assets/playing-live/concepts-and-modes.png` | `playing-live/concepts-modes.md` |
+| Control Mode display example | `wiki.mod.audio/images/2/22/Dwarf_Display.png` | `docs/assets/playing-live/control-mode-display.png` | `playing-live/concepts-modes.md` |
+| Navigation Mode screen | `wiki.mod.audio/images/d/de/MOD_Dwarf_wiki_NavigationMode.png` | `docs/assets/playing-live/navigation-mode.png` | `playing-live/navigation-mode.md` |
+| Tuner tool screen | `wiki.mod.audio/images/4/48/MOD_Dwarf_wiki_tuner.png` | `docs/assets/playing-live/tuner-tool.png` | `playing-live/tool-mode.md` |
+| Tempo tool screen | `wiki.mod.audio/images/0/02/MOD_Dwarf_wiki_tempo.png` | `docs/assets/playing-live/tempo-tool.png` | `playing-live/tool-mode.md` |
+| Settings menu screen | `wiki.mod.audio/images/6/60/Dwarf_SettingsMenu.png` | `docs/assets/settings/settings-menu.png` | `settings/audio-io.md` |
+| Back panel ports (labeled) | `wiki.mod.audio/images/5/59/Dwarf_ports.png` | `docs/assets/reference/dwarf-back-ports.png` | `reference/tech-specs.md` |
+
+(Full addresses above are shortened for the table — add `https://` to the front of each.) You can delete this table once all eleven are in, or leave it as a record of where the early images came from.
 
 ## Every OS release
 
-This is the part that actually keeps the manual honest. When a new Dwarf OS version ships, work through this before considering the manual "caught up":
+This is what actually keeps the manual accurate over time. When a new Dwarf OS version ships, work through this list:
 
-1. **Read the release notes / changelog** for what shipped — new features, bug fixes, UI changes.
-2. **Update or write pages for anything new.** Check `pedalboards-snapshots/drag-replace.md` and any other page marked "Pending implementation" — if it just shipped, rewrite it against the real UI and remove the warning.
-3. **Re-check flagged pages.** Search for `Needs SME confirmation` — if this release (or someone with hands-on access) can confirm those details now, lock them in and remove the flag.
-4. **Review screenshots** on any page whose relevant UI changed. There's no tooling to catch this automatically — it means actually looking.
-5. **Check for removed/renamed features** that might leave a page describing something that no longer exists.
-6. **Build and preview locally** (`mkdocs serve`) before pushing, to catch broken links or formatting issues — `mkdocs build --strict` will fail loudly on a broken internal link, which is worth running once before you push.
-7. **Push, confirm the Actions run is green, spot-check the live site.**
+1. **Read what changed** in the release — new features, bug fixes, anything visual.
+2. **Write up anything new.** Check for pages marked "Pending implementation" (search for that phrase across the `docs/` folder) — if the feature just shipped, replace the placeholder with real, verified content.
+3. **Re-check flagged pages.** Search for "Needs SME confirmation" — if you or someone with the device can now confirm those details, do so and remove the flag.
+4. **Look at screenshots** on any page whose on-screen UI changed. Nothing will warn you automatically here — it just needs a look.
+5. **Check nothing describes a feature that's been removed or renamed.**
+6. **Preview before pushing.** Run `mkdocs build --strict` in the terminal — it'll fail loudly if you've left a broken link, which is much better to catch now than after it's live.
+7. **Push, wait for the green checkmark on Actions, spot-check the live site.**
 
-If ALABS Starless features get merged into an official release, they'll need new pages under Playing Live and Working with Pedalboards & Snapshots — that scope hasn't been decided yet, so don't write speculative content for them until Gianfranco confirms what's actually shipping.
+If ALABS Starless features get merged into an official release, they'll need new pages — that scope hasn't been decided yet, so hold off writing anything for them until Gianfranco confirms what's actually shipping.
 
 ## Who to ask
 
-- **Scope or copy decisions** (what the manual should say, what's in/out): Gianfranco.
-- **Technical accuracy on the OS/stack itself**: falkTX, or whoever owns the relevant backlog item.
-- **Community-facing tone questions**: check how the forum and existing marketing material talk about the same feature, for consistency.
+- **Should the manual say X, or is this in scope?** — Gianfranco.
+- **Is this technical detail actually correct?** — falkTX, or whoever owns that part of the OS.
+- **Does this match how we talk about the product elsewhere?** — check the forum and marketing material for the same feature.
+
+## If something feels like you broke it
+
+You didn't, probably. Every change is a commit, which means every past version is still saved — nothing is ever truly lost. If a page looks wrong after you pushed, you can always go back into it and fix it the same way you edited it the first time. When in doubt, ask before worrying.
 
 ## Toolchain
 
-See the "Toolchain note" in `README.md` for the current state of MkDocs vs. MkDocs 2.0 vs. Zensical — worth a skim if you're setting up a new machine and something doesn't install the way you expect.
+See the "Toolchain note" in `README.md` for the current state of MkDocs vs. MkDocs 2.0 vs. Zensical — worth a skim if you're setting up on a new machine and something doesn't install the way you'd expect.
