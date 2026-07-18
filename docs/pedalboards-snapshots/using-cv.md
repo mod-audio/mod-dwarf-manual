@@ -9,10 +9,9 @@ The basics of assigning a CV source to a parameter are covered in [Assigning Con
 
 ## What's available
 
-The Plugin Store's Control Voltage category currently includes (on the Stable update channel): converters (Audio to CV, Audio to CV Pitch, MIDI to CV mono, MIDI to CV Poly), signal shapers and generators (CV Parameter Modulation, Random CV Generator, Slew Rate Limiter, CV Round, CV ABS), logic and routing (Logic Operators, CV Range Divider, CV Switchbox), a trigger source (Multi Button to CV, CV Gate), and a CV Meter for monitoring.
+The Plugin Store's Control Voltage category, on the Stable update channel, includes a proper modular toolkit: oscillator, filter, and amplifier (AMS VCO3, VCF, VCA Lin/Exp), envelope and LFO sources (AMS Envelope, AMS LFO2 - Freq, dm-LFO), converters (Audio to CV, Audio to CV Pitch, MIDI to CV mono/Poly), and a set of MOD-built utilities for shaping, routing, and triggering CV (Parameter Modulation, Attenuverter Booster, Random Generator, Slew Rate Limiter, Round, ABS, Logic Operators, Range Divider, Switchbox, Multi Button to CV, CV Gate, CV Clock, Control to CV, CV meter). The full build-a-voice walkthrough is in [Modular Synth Basics](modular-synth-basics.md).
 
-!!! note "About the AMS modular suite"
-    You may come across a larger set of modular-synth-style plugins (oscillators, filters, VCAs, envelopes, a sequencer — the "AMS" suite, ported from AlsaModularSynth) referenced elsewhere or visible in the plugin database. As of this writing those aren't published to the Stable update channel, so don't rely on them for content in this manual yet — see [Modular Synth Basics](modular-synth-basics.md) for what's confirmed available today, and what to check before writing about AMS modules.
+Not everything you might see referenced (in the wider AMS suite this ships from, or elsewhere) is on Stable — a sequencer, Sample&Hold, and most of the rest of that ~65-module bundle aren't confirmed available. See [Confirming Stable availability](modular-synth-basics.md#confirming-stable-availability) before adding anything beyond what's listed above.
 
 ## Enabling and assigning a CV source
 
@@ -40,10 +39,7 @@ Because PARAMETER and MOD. DEPTH are themselves plugin parameters, you can assig
 
 ## Macro controls
 
-!!! warning "Not on Stable yet"
-    The plugin this technique relies on, **Control to CV**, is part of the AMS suite and isn't published to the Stable update channel as of this writing. Confirm it's actually installable on a Stable Dwarf before publishing this section for real — see the note in [Modular Synth Basics](modular-synth-basics.md#confirming-stable-availability) for how to check. Keeping the description here for when it does ship.
-
-To control several parameters across several plugins from a single knob, use the **Control to CV** plugin as a macro source:
+To control several parameters across several plugins from a single knob, use the **MOD Control to CV** plugin as a macro source:
 
 1. Add **Control to CV** to your pedalboard and enable its CV output.
 2. Assign that output to every parameter (in any plugin) you want the macro to control.
