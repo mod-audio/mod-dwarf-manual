@@ -9,7 +9,10 @@ The basics of assigning a CV source to a parameter are covered in [Assigning Con
 
 ## What's available
 
-The Plugin Store has a CV category with LFOs, envelopes, VCAs, signal switchers, and converters (audio-to-CV, MIDI-to-CV) among others. Combine them to build anything from a slow filter sweep to a full internal drum-machine-style patch — an LFO or envelope plugin can drive the pitch, volume, or filter cutoff of another plugin entirely inside the signal chain.
+The Plugin Store's Control Voltage category currently includes (on the Stable update channel): converters (Audio to CV, Audio to CV Pitch, MIDI to CV mono, MIDI to CV Poly), signal shapers and generators (CV Parameter Modulation, Random CV Generator, Slew Rate Limiter, CV Round, CV ABS), logic and routing (Logic Operators, CV Range Divider, CV Switchbox), a trigger source (Multi Button to CV, CV Gate), and a CV Meter for monitoring.
+
+!!! note "About the AMS modular suite"
+    You may come across a larger set of modular-synth-style plugins (oscillators, filters, VCAs, envelopes, a sequencer — the "AMS" suite, ported from AlsaModularSynth) referenced elsewhere or visible in the plugin database. As of this writing those aren't published to the Stable update channel, so don't rely on them for content in this manual yet — see [Modular Synth Basics](modular-synth-basics.md) for what's confirmed available today, and what to check before writing about AMS modules.
 
 ## Enabling and assigning a CV source
 
@@ -37,6 +40,9 @@ Because PARAMETER and MOD. DEPTH are themselves plugin parameters, you can assig
 
 ## Macro controls
 
+!!! warning "Not on Stable yet"
+    The plugin this technique relies on, **Control to CV**, is part of the AMS suite and isn't published to the Stable update channel as of this writing. Confirm it's actually installable on a Stable Dwarf before publishing this section for real — see the note in [Modular Synth Basics](modular-synth-basics.md#confirming-stable-availability) for how to check. Keeping the description here for when it does ship.
+
 To control several parameters across several plugins from a single knob, use the **Control to CV** plugin as a macro source:
 
 1. Add **Control to CV** to your pedalboard and enable its CV output.
@@ -44,8 +50,7 @@ To control several parameters across several plugins from a single knob, use the
 
 Turning the Control to CV plugin's own knob now moves all of them together. You can assign that knob to a physical encoder or footswitch for hands-on macro control, and you can add as many Control to CV plugins as you like, each driving a different group of parameters.
 
-!!! warning "Off means zero, not \"no change\""
-    Turning off a Control to CV plugin makes it broadcast zero rather than leaving assigned parameters where they were — everything it's driving will drop to its minimum. Keep that in mind before bypassing one mid-performance.
+Off means zero, not "no change": turning off a Control to CV plugin makes it broadcast zero rather than leaving assigned parameters where they were — everything it's driving will drop to its minimum. Keep that in mind before bypassing one mid-performance.
 
 One practical use: pairing two mono plugin instances (say, two instances of a mono drive pedal) and using two Control to CV plugins to keep a stereo pair's controls locked together, since the plugin itself has no native stereo mode.
 
