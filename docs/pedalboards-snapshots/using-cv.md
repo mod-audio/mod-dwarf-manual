@@ -51,4 +51,4 @@ One practical use: pairing two mono plugin instances (say, two instances of a mo
 
 ---
 
-Next: [Connecting Gear](../connecting-gear/midi-expression.md)
+Next: [Modular Synth Basics](modular-synth-basics.md)

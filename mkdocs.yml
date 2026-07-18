@@ -83,6 +83,7 @@ nav:
       - Drag & Replace Plugin: pedalboards-snapshots/drag-replace.md
       - Backup & Restore: pedalboards-snapshots/backup-restore.md
       - Using CV (Control Voltage): pedalboards-snapshots/using-cv.md
+      - Modular Synth Basics: pedalboards-snapshots/modular-synth-basics.md
   - Connecting Gear:
       - MIDI Controllers & Expression Pedals: connecting-gear/midi-expression.md
       - Control Chain Devices: connecting-gear/control-chain.md
