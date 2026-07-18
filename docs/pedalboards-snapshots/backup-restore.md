@@ -21,4 +21,4 @@ If the USB stick isn't recognized during backup or restore, see [Troubleshooting
 
 ---
 
-Next: [Connecting Gear](../connecting-gear/midi-expression.md)
+Next: [Using CV (Control Voltage)](using-cv.md)

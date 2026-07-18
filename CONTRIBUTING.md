@@ -153,8 +153,12 @@ These are good starting images, already identified from the wiki, ready to pull 
 | Tempo tool screen | `wiki.mod.audio/images/0/02/MOD_Dwarf_wiki_tempo.png` | `docs/assets/playing-live/tempo-tool.png` | `playing-live/tool-mode.md` |
 | Settings menu screen | `wiki.mod.audio/images/6/60/Dwarf_SettingsMenu.png` | `docs/assets/settings/settings-menu.png` | `settings/audio-io.md` |
 | Back panel ports (labeled) | `wiki.mod.audio/images/5/59/Dwarf_ports.png` | `docs/assets/reference/dwarf-back-ports.png` | `reference/tech-specs.md` |
+| Enabling a CV output port | `wiki.mod.audio/images/b/b2/Cv-manage-selected.png` | `docs/assets/pedalboards-snapshots/cv-manage-ports.png` | `pedalboards-snapshots/using-cv.md` |
+| CV assignment dialog | `wiki.mod.audio/images/6/69/Cv-assign.png` | `docs/assets/pedalboards-snapshots/cv-assign-dialog.png` | `pedalboards-snapshots/using-cv.md` |
+| CV Parameter Modulation setup | `wiki.mod.audio/images/b/b7/Activating-param.png` | `docs/assets/pedalboards-snapshots/cv-parameter-modulation.png` | `pedalboards-snapshots/using-cv.md` |
+| Macro-control setup (Control to CV) | `wiki.mod.audio/images/2/23/Assign-macro-knob.png` | `docs/assets/pedalboards-snapshots/cv-macro-control.png` | `pedalboards-snapshots/using-cv.md` |
 
-(Full addresses above are shortened for the table — add `https://` to the front of each.) You can delete this table once all eleven are in, or leave it as a record of where the early images came from.
+(Full addresses above are shortened for the table — add `https://` to the front of each.) You can delete this table once all rows are in, or leave it as a record of where the early images came from.
 
 ## Every OS release
 

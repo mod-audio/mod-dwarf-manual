@@ -37,6 +37,8 @@ CV assignment is a two-step process:
 1. Enable a CV output from a CV-generating plugin already in your pedalboard (click the CV ports button, check the outputs you want, label them).
 2. In the target parameter's assignment dialog, select the **CV** tab and pick the labeled output.
 
+For shaping the CV signal itself and driving several parameters from one source, see [Using CV (Control Voltage)](../pedalboards-snapshots/using-cv.md).
+
 ---
 
 Next: [Snapshots](snapshots.md)

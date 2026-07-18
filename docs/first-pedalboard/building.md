@@ -17,7 +17,7 @@ The Web UI uses color to distinguish connection types:
 
 - **Purple** — audio connections, carrying signal between plugins.
 - **Cyan** — MIDI connections.
-- **Orange** — Control Voltage (CV) connections, for modular-style parameter control.
+- **Orange** — Control Voltage (CV) connections, for modular-style parameter control. See [Using CV (Control Voltage)](../pedalboards-snapshots/using-cv.md) for what you can do with it.
 
 A plugin can have one or two audio inputs/outputs (mono or stereo), and some take mono in but output stereo.
 
