@@ -4,11 +4,18 @@ The Dwarf has no built-in Bluetooth radio — you need a Bluetooth USB dongle, v
 
 ## Enabling discovery
 
+![The Bluetooth settings menu on the device, showing Status / Name / Address and the enable-discovery option](../assets/settings/Dwarf_BluetoothMenu.png)
+
 From the device: Settings → Bluetooth → enable discovery. This stays discoverable for 2 minutes. The same menu shows your connection status, the device's Bluetooth name (customizable from the Web UI settings), and its Bluetooth MAC address.
 
 ## Pairing
 
 Once discovery is on, pair from your computer or mobile device same as any Bluetooth accessory. If prompted for a PIN, use `0000`.
+
+![Per-OS pairing screenshots — the wiki's "Bluetooth" page has a full sequence for each platform below, all reusable (1/4)](../assets/connecting-gear/Bluetooth-win-1.png)
+![Per-OS pairing screenshots — the wiki's "Bluetooth" page has a full sequence for each platform below, all reusable (2/4)](../assets/connecting-gear/MacOSX_BTConnectDevice.png)
+![Per-OS pairing screenshots — the wiki's "Bluetooth" page has a full sequence for each platform below, all reusable (3/4)](../assets/connecting-gear/IPhoneBluetoothON.PNG)
+![Per-OS pairing screenshots — the wiki's "Bluetooth" page has a full sequence for each platform below, all reusable (4/4)](../assets/connecting-gear/Android_MODavailable.png)
 
 **Windows**: Join a Personal Area Network from the Bluetooth icon, add the device, connect using "Access point." You'll need to re-enable discovery on the Dwarf each time you reconnect.
 

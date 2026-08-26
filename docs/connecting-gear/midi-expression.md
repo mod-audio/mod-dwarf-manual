@@ -6,9 +6,19 @@ Connect via the 3.5mm TRS MIDI I/O ports (Type-A — use a Type-A adapter if you
 
 To see MIDI ports represented in the Web UI Constructor, enable them under the MIDI ports setup (Status Bar → MIDI ports icon):
 
+![The MIDI ports setup panel opened from the Status Bar](../assets/connecting-gear/MIDIPorts.png)
+
 - **Aggregated mode** — all connected controllers appear as one MIDI In/Out. Simple, but you can't tell controllers apart.
+
+![Aggregated MIDI ports mode in the Constructor](../assets/connecting-gear/AggregatedMIDIPorts.png)
+
 - **Separated mode** — each enabled controller gets its own port in the Constructor. Use this if you want different controllers playing different instrument plugins.
+
+![Separated MIDI ports mode in the Constructor](../assets/connecting-gear/SeparatedMIDIPorts.png)
+
 - **Virtual MIDI Loopback** — routes MIDI output back into the device's own input, as if you'd patched MIDI out to MIDI in with a cable.
+
+![A Virtual MIDI Loopback connection in the Constructor](../assets/connecting-gear/VirtualMIDIPort.png)
 
 Controllers connected via the physical MIDI ports (not USB) can't be individually distinguished, even in Separated mode — that's a limitation of the MIDI hardware itself, not the Dwarf.
 

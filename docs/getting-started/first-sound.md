@@ -5,6 +5,8 @@
 
 With power and audio connected, switch the Dwarf on. It boots into **Control Mode**, its default mode — the display shows the name of the currently loaded pedalboard or snapshot at the top, with the parameters mapped to the three encoders below it.
 
+![The Dwarf's screen in Control Mode right after boot](../assets/playing-live/Dwarf_Display.png)
+
 A new Dwarf ships with factory pedalboards already installed, organized into factory Banks. One of them loads automatically on boot, so you should hear sound as soon as you play your connected instrument — no Web UI required.
 
 To try a different factory pedalboard without touching the Web UI:

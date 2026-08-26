@@ -1,5 +1,7 @@
 # USB Host Devices
 
+![The back panel with the USB Host (Type-A) port labeled/highlighted](../assets/getting-started/Dwarf_ConnectionsOverview.png)
+
 The USB Host port (Type-A, USB 2.0, 500mA max output) is where you connect peripherals to the Dwarf — as opposed to the USB-B "computer" port, which is how the Dwarf connects to you.
 
 Typical uses:

@@ -14,6 +14,8 @@ No input or output: check the corresponding LEDs light up, check your cables, an
 
 ## USB / Web UI access
 
+![The System Behavior settings screen showing the USB-B Mode options](../assets/settings/Dwarf_SystemBehaviorMenu.png)
+
 Can't reach the Web UI: confirm you're on the USB-B port, and try a different USB-B Mode (Settings → System Behavior). If your computer went to sleep while connected, unplug and replug the USB cable — this is a known side effect of USB selective suspend. On Windows or macOS, also try: `http://` not `https://`, a different browser, checking for firewall blocks, a different cable, or a different computer.
 
 ## MIDI
@@ -31,6 +33,8 @@ If a connected device's assignments aren't showing: confirm something is actuall
 If you're getting noise when connecting the Dwarf to other gear, it may be a ground loop — try powering everything from the same outlet, or disconnecting from your computer's USB if that's part of the chain. For everyday "too hot" or "too cold" signal issues, use a meter plugin in your pedalboard to find where the level is off, and adjust gain at that stage rather than at the very end of the chain. Keep output LEDs green, occasionally yellow, never red.
 
 ## High CPU / RAM usage
+
+![The CPU/RAM usage monitor in the Web UI status bar](../assets/maintaining/Gui-23.png)
 
 Keep CPU usage under 80% to avoid audio dropouts (X-runs). If you're running close to the limit: avoid long series chains of plugins (they're all pinned to one CPU core — Portal Sink/Source plugins can split a chain across cores), try reducing buffer size in Advanced Settings, or swap a CPU-heavy plugin (reverbs, delays, amp/IR modeling) for a lighter alternative from the Plugin Store.
 

@@ -9,6 +9,9 @@ Snapshot order matters if you're stepping through them with a footswitch or MIDI
 1. Enter [Navigation Mode](../playing-live/navigation-mode.md) (footswitches B + C).
 2. Switch to the snapshots list (footswitch A) if you're not already there.
 3. Scroll the left-most encoder to the snapshot you want to move.
+
+![The left-most encoder highlighted, for scrolling/reordering the snapshot list](../assets/playing-live/LeftMostEncoder_MODDwarf.png)
+
 4. Click and hold the encoder, then turn it to move the snapshot up or down the list.
 
 As with any snapshot change, **re-save the pedalboard** afterward so the new order sticks after a power cycle.

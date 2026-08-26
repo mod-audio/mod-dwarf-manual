@@ -48,6 +48,10 @@ This patch: press a button, hear a note with a shaped envelope and a filter swee
 6. **Add AMS LFO2 - Freq** and connect its CV output to the VCF's Frequency CV input, for a slow filter sweep. Turn down the LFO's depth if the effect is too strong — or route it through [CV Parameter Modulation](using-cv.md#cv-parameter-modulation) or **MOD Attenuverter Booster** first for more control over the range.
 7. Save the pedalboard, then trigger your footswitch and listen.
 
+<!-- IMAGE NEEDED: A screenshot of the finished basic-voice patch in the Constructor (VCO3 → Multi Button to CV → Envelope → VCA → VCF → LFO2)
+     No wiki source — this exact patch is original to this manual, not migrated from the wiki. Build and verify the patch on a real Dwarf first, then screenshot it.
+     Suggested: docs/assets/pedalboards-snapshots/basic-voice-patch.png -->
+
 From here, swapping VCO3's waveform, changing the envelope's attack/release, or adding dm-LFO as a second modulation source gets you a long way toward a proper synth voice — all without leaving the pedalboard.
 
 ## Two more patches worth trying
@@ -71,6 +75,8 @@ The plugin list on this page was checked against the actual Stable `ControlVolta
 The community has shared full synth pedalboards built this way — worth loading one and taking it apart to see how the routing works:
 
 - [MOD CV Drum Machine](https://pedalboards.moddevices.com/pedalboards/5e4ff5672564d41c3fe1b5a1) — a standalone drum machine built from CV plugins.
+
+![A screenshot of the MOD CV Drum Machine pedalboard, loaded and patched](../assets/pedalboards-snapshots/Drum-machine.png)
 - The GSYNTH series ([Bass](https://pedalboards.moddevices.com/pedalboards/62700e60e17f17a179fe75ab), [Lead](https://pedalboards.moddevices.com/pedalboards/62700f87656fdba0ab347107), [Chords](https://pedalboards.moddevices.com/pedalboards/62700f07e17f17a179fe75ac), [Flexible](https://pedalboards.moddevices.com/pedalboards/62700cff656fdba0ab347093)) — guitar-into-synth patches built around the same AMS modules used above.
 
 !!! note "Not independently re-verified"

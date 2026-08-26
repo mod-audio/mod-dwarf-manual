@@ -13,6 +13,10 @@ The intent is that dropping a compatible plugin onto an existing one:
 
 Replacement only makes sense between plugins of compatible IO type (for example, an FX plugin for another FX plugin, an Instrument for another Instrument) — dropping a Meter onto an Audio-generator, for instance, wouldn't have a sensible connection mapping. The exact rules for which types are considered compatible are still being finalized.
 
+<!-- IMAGE NEEDED: A before/after screenshot of dragging a replacement plugin onto an existing one
+     No wiki source — feature hasn't shipped yet. Screenshot once it's implemented and this page's "Pending implementation" flag is lifted.
+     Suggested: docs/assets/pedalboards-snapshots/drag-replace.png -->
+
 ---
 
 Next: [Backup & Restore](backup-restore.md)

@@ -2,6 +2,9 @@
 
 The Web UI is where you build and edit pedalboards. It's a browser-based interface served by the Dwarf itself — nothing to install.
 
+![The Web UI Constructor as it looks the first time you open it (1/2)](../assets/first-pedalboard/WebGUI_PedalboardView.png)
+![The Web UI Constructor as it looks the first time you open it (2/2)](../assets/first-pedalboard/CPU_heavyPedalboard.png)
+
 ## Via USB
 
 Connect the USB cable between the Dwarf's USB-B port and your computer. Your operating system should recognize the Dwarf as a network device automatically. Open a browser and go to:

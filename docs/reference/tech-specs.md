@@ -12,6 +12,8 @@
 
 ## Audio I/O
 
+![The back panel with all ports labeled](../assets/reference/Dwarf_ports.png)
+
 - **Inputs**: 2× independent mono, unbalanced TRS, -12dB to +35dB gain in 0.5dB steps, 1MΩ impedance
 - **Outputs**: 2× independent mono, balanced TRS, 0dB to -127dB in 0.5dB steps
 - **Headphone**: 3.5mm TRS stereo, 2×105mW @ 16Ω, mirrors main outputs, -33dB to +12dB in 3dB steps

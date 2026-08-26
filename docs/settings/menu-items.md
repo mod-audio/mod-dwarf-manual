@@ -1,5 +1,7 @@
 # Menu Items
 
+![The Menu Items settings screen, where you pick the three quick-access slots](../assets/settings/Dwarf_Settings-Menu_Items.png)
+
 The Menu button opens a screen with three quick-access items — pick what those three are here. Turn the left-most encoder to set Item 1, the center encoder for Item 2, the right-most for Item 3.
 
 Available options for each slot:
@@ -16,9 +18,14 @@ Available options for each slot:
 
 A few other behaviors worth knowing about, found under Controller Behavior in Settings:
 
+![The Controller Behavior settings screen](../assets/settings/Dwarf_ControllerBehaviorMenu.png)
+
 - **Default Tool** — which tool (Tuner or Tempo) opens first when you enter Tool Mode.
 - **Menu Button Mode** — Latching (press once to open, again to close) or Momentary (hold to keep open).
 - **List Behavior** — Direct (scrolling selects immediately) or Click (scroll then press to select).
+
+![The Display & LEDs and Appearance settings screens (1/2)](../assets/settings/Dwarf_DisplayMenu.png)
+![The Display & LEDs and Appearance settings screens (2/2)](../assets/settings/Dwarf_AppearanceMenu.png)
 
 And under Display & LEDs / Appearance: display brightness and contrast, LED brightness, and whether the header shows the pedalboard name or the snapshot name.
 

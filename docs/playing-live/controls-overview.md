@@ -1,5 +1,7 @@
 # Controls Overview
 
+![Labeled diagram of the Dwarf's full control surface — encoders, push buttons, menu button, footswitches](../assets/playing-live/Dwarf_Actuators.png)
+
 ## Encoders
 
 The three endless knobs each behave differently depending on what's assigned to them:
@@ -15,9 +17,15 @@ Some parameters can also be pushed for a full-screen view of the value or list.
 
 The three rectangular buttons under the encoders switch between the three encoder sub-pages in Control Mode, and perform the on-screen actions shown in Navigation Mode, the device menu, or Settings.
 
+![The three sub-page push buttons highlighted](../assets/playing-live/Dwarf_SubPagesButtons.png)
+
 ## Menu button
 
+![The Menu button location, highlighted, to the left of the display](../assets/playing-live/Dwarf_MenuButton.png)
+
 To the left of the display. Opens the quick menu, where you can save pedalboards and snapshots, jump into [Settings](../settings/audio-io.md), or adjust up to three parameters you've defined as Menu Items.
+
+![The quick menu screen the Menu button opens](../assets/playing-live/Dwarf_MenuItems.png)
 
 ## Display
 
@@ -28,6 +36,8 @@ To the left of the display. Opens the quick menu, where you can save pedalboards
 Three footswitches (A, B, C), each context-dependent:
 
 **Footswitch A**
+
+![Footswitch A highlighted on the device](../assets/playing-live/Dwarf_FootswitchA.png)
 
 - Control Mode: cycles between the 8 assignment pages.
 - Navigation Mode: cycles between the pedalboards and snapshots lists.

@@ -6,6 +6,12 @@ By default, a backup includes your banks and pedalboards. You can optionally inc
 
 ## Creating a backup
 
+![The Settings button/entry point in the Web UI status bar](../assets/settings/SettingsButton.png)
+
+<!-- IMAGE NEEDED: The Backup & Restore panel under Web UI Settings, with the include-checkboxes and "Backup user data..." button
+     No exact wiki source found — the wiki shows the parent "Basic" settings page (https://wiki.mod.audio/images/5/56/MODWebGUI_SettingsPage.png, from "MOD Web GUI User Guide") but not a screenshot of the Backup & Restore panel itself; needs a fresh screenshot of that specific panel
+     Suggested: docs/assets/pedalboards-snapshots/backup-restore-panel.png -->
+
 1. Insert a USB stick into the USB Host port (A). Use one with enough free space, preferably formatted FAT32.
 2. In the Web UI, open Settings → Backup & Restore, and check the boxes for what you want to include.
 3. Click "Backup user data..." and wait for it to finish.

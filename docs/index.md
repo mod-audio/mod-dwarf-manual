@@ -2,6 +2,8 @@
 
 Welcome to the manual for the **MOD Dwarf**, your modular audio processor.
 
+![Hero shot of the Dwarf, powered up, for the top of the landing page](assets/getting-started/Dwarf_FrontPanel.png)
+
 This manual is organized around what you're trying to do, not around the device's internal architecture — so a single page will walk you through both the hardware controls and the Web UI steps needed for a task, instead of sending you back and forth between separate reference pages.
 
 ## Where to start

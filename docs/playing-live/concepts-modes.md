@@ -1,5 +1,7 @@
 # Device Concepts & Modes
 
+![The "Concepts and Modes" overview diagram](../assets/playing-live/Concepts_and_Modes.png)
+
 The Dwarf has three modes, each suited to a different part of using the device.
 
 - **Control Mode** — the default mode. Play and tweak pre-mapped parameters from your loaded pedalboard using the encoders and footswitches.
@@ -9,6 +11,8 @@ The Dwarf has three modes, each suited to a different part of using the device.
 You move between them with footswitch combinations rather than a menu, so switching stays fast during a performance — see [Controls Overview](controls-overview.md) for exactly which combination does what.
 
 ## Control Mode
+
+![The Control Mode screen, with each display region labeled (header, encoder params, subpages, footswitch labels)](../assets/playing-live/Dwarf_Display.png)
 
 Control Mode is what you see on boot. The display header shows the current pedalboard or snapshot name (you choose which in [Settings](../settings/audio-io.md)); below it, the parameters currently mapped to the three encoders for the active page and sub-page.
 

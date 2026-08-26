@@ -6,11 +6,16 @@ Typical use: different snapshots for verse/chorus, or for different songs that s
 
 ## From the Web UI
 
+![The Snapshots button on the pedalboard actions bar, and the menu it opens (1/2)](../assets/first-pedalboard/SnapshotsButton.png)
+![The Snapshots button on the pedalboard actions bar, and the menu it opens (2/2)](../assets/first-pedalboard/SnapshotsMenu.png)
+
 Open the Snapshots menu from the pedalboard actions bar.
 
 - **Save** — updates the current snapshot with the pedalboard's current parameter state.
 - **Save as** — creates a new snapshot under a new name.
 - **Load / Manage** — load, rename, or delete a saved snapshot.
+
+![The Load/Manage snapshots panel](../assets/first-pedalboard/LoadManageSnapshots.png)
 
 Snapshots live inside the pedalboard file, so **you must save the pedalboard itself** after saving or changing a snapshot, or the change won't persist.
 
@@ -23,6 +28,9 @@ You can save, remove, and reorder snapshots directly on the Dwarf, without openi
 1. Enter [Navigation Mode](../playing-live/navigation-mode.md) (footswitches B + C together).
 2. Switch to the Snapshots list (footswitch A).
 3. To save: press the left-most button ("Save"), which opens the character input screen with the current snapshot name pre-filled — keep the name to overwrite, or type a new one to create a new snapshot.
+
+![The device's character input screen, pre-filled with the current snapshot name, and the character-picker overlay (1/2)](../assets/first-pedalboard/Dwarf_SavePedalboardScreen.png)
+![The device's character input screen, pre-filled with the current snapshot name, and the character-picker overlay (2/2)](../assets/first-pedalboard/Dwarf_CharacterInputScreen.png)
 4. To remove: highlight a snapshot, press the right-most button ("Remove"), confirm.
 5. To reorder: click and hold the left-most encoder on a snapshot, then turn to move it up or down the list.
 

@@ -136,29 +136,28 @@ https://wiki.mod.audio/images/b/b1/Dwarf_FrontPanel.png
 
 Open that address in your browser, right-click the image, and save it — that's the file to upload.
 
-### First batch to get started
+### Where the missing images are marked
 
-These are good starting images, already identified from the wiki, ready to pull in. Each row is: what it is → where to get the full-size original → suggested filename and folder → which manual page to add it to.
+Most of this is done. The wiki-sourced images have been downloaded (via `download-wiki-images.sh`) and wired into the pages as real `![description](../assets/section/filename.png)` lines — **107 images across the manual**.
 
-| Image | Full-size URL | Save as | Add to page |
-|---|---|---|---|
-| Dwarf front panel photo | `wiki.mod.audio/images/b/b1/Dwarf_FrontPanel.png` | `docs/assets/getting-started/dwarf-front-panel.png` | `getting-started/connecting.md` |
-| Device overview wireframe | `wiki.mod.audio/images/0/0a/Dwarf_UsageOverview.png` | `docs/assets/getting-started/dwarf-overview.png` | `getting-started/connecting.md` |
-| Back panel connections overview | `wiki.mod.audio/images/4/4e/Dwarf_ConnectionsOverview.png` | `docs/assets/getting-started/dwarf-connections-overview.png` | `getting-started/connecting.md` |
-| Actuators diagram (knobs/buttons/footswitches) | `wiki.mod.audio/images/2/26/Dwarf_Actuators.png` | `docs/assets/playing-live/dwarf-actuators.png` | `playing-live/controls-overview.md` |
-| Concepts & Modes diagram | `wiki.mod.audio/images/1/13/Concepts_and_Modes.png` | `docs/assets/playing-live/concepts-and-modes.png` | `playing-live/concepts-modes.md` |
-| Control Mode display example | `wiki.mod.audio/images/2/22/Dwarf_Display.png` | `docs/assets/playing-live/control-mode-display.png` | `playing-live/concepts-modes.md` |
-| Navigation Mode screen | `wiki.mod.audio/images/d/de/MOD_Dwarf_wiki_NavigationMode.png` | `docs/assets/playing-live/navigation-mode.png` | `playing-live/navigation-mode.md` |
-| Tuner tool screen | `wiki.mod.audio/images/4/48/MOD_Dwarf_wiki_tuner.png` | `docs/assets/playing-live/tuner-tool.png` | `playing-live/tool-mode.md` |
-| Tempo tool screen | `wiki.mod.audio/images/0/02/MOD_Dwarf_wiki_tempo.png` | `docs/assets/playing-live/tempo-tool.png` | `playing-live/tool-mode.md` |
-| Settings menu screen | `wiki.mod.audio/images/6/60/Dwarf_SettingsMenu.png` | `docs/assets/settings/settings-menu.png` | `settings/audio-io.md` |
-| Back panel ports (labeled) | `wiki.mod.audio/images/5/59/Dwarf_ports.png` | `docs/assets/reference/dwarf-back-ports.png` | `reference/tech-specs.md` |
-| Enabling a CV output port | `wiki.mod.audio/images/b/b2/Cv-manage-selected.png` | `docs/assets/pedalboards-snapshots/cv-manage-ports.png` | `pedalboards-snapshots/using-cv.md` |
-| CV assignment dialog | `wiki.mod.audio/images/6/69/Cv-assign.png` | `docs/assets/pedalboards-snapshots/cv-assign-dialog.png` | `pedalboards-snapshots/using-cv.md` |
-| CV Parameter Modulation setup | `wiki.mod.audio/images/b/b7/Activating-param.png` | `docs/assets/pedalboards-snapshots/cv-parameter-modulation.png` | `pedalboards-snapshots/using-cv.md` |
-| Macro-control setup (Control to CV) | `wiki.mod.audio/images/2/23/Assign-macro-knob.png` | `docs/assets/pedalboards-snapshots/cv-macro-control.png` | `pedalboards-snapshots/using-cv.md` |
+What's left are **7 genuine content gaps** — spots where no wiki source ever existed (a fresh device photo, or a screen that hasn't shipped yet), each still marked with an invisible HTML comment in the page's source:
 
-(Full addresses above are shortened for the table — add `https://` to the front of each.) You can delete this table once all rows are in, or leave it as a record of where the early images came from.
+```
+<!-- IMAGE NEEDED: what the image should show
+     No wiki source found — needs a fresh screenshot/photo
+     Suggested: docs/assets/section/filename.png -->
+```
+
+To find them: search the `docs/` folder for the text `IMAGE NEEDED` (same way you'd search for "Needs SME confirmation" — see "Every OS release" below). Currently these are:
+
+- `pedalboards-snapshots/backup-restore.md` and `maintaining/os-updates.md` — the wiki only shows the parent Settings page, not the specific Backup & Restore / Reboot & Update panel; needs a fresh screenshot of each panel.
+- `pedalboards-snapshots/modular-synth-basics.md` — a screenshot of the finished example patch, once it's built and verified on a real Dwarf.
+- `pedalboards-snapshots/drag-replace.md` — a before/after screenshot, once Drag & Replace Plugin actually ships.
+- `connecting-gear/control-chain.md` — this one's really a content gap, not just an image: the Device Updates panel for Control Chain peripheral firmware isn't documented at all yet.
+- `maintaining/factory-reset.md` — a photo of the device in recovery mode (blue LEDs).
+- `playing-live/led-meters.md` — a close-up photo of the LED color states.
+
+For each: take the photo/screenshot, upload it to the suggested path under `docs/assets/` (see "Easy mode: adding an image" above), then replace the HTML comment with a real image line.
 
 ## Every OS release
 
@@ -167,7 +166,7 @@ This is what actually keeps the manual accurate over time. When a new Dwarf OS v
 1. **Read what changed** in the release — new features, bug fixes, anything visual.
 2. **Write up anything new.** Check for pages marked "Pending implementation" (search for that phrase across the `docs/` folder) — if the feature just shipped, replace the placeholder with real, verified content.
 3. **Re-check flagged pages.** Search for "Needs SME confirmation" — if you or someone with the device can now confirm those details, do so and remove the flag.
-4. **Look at screenshots** on any page whose on-screen UI changed. Nothing will warn you automatically here — it just needs a look.
+4. **Look at screenshots** on any page whose on-screen UI changed. Nothing will warn you automatically here — it just needs a look. Also worth a search for "IMAGE NEEDED" — if the release added or changed a screen that already has a marker, this is a natural time to knock a few out.
 5. **Check nothing describes a feature that's been removed or renamed.**
 6. **Preview before pushing.** Run `mkdocs build --strict` in the terminal — it'll fail loudly if you've left a broken link, which is much better to catch now than after it's live.
 7. **Push, wait for the green checkmark on Actions, spot-check the live site.**

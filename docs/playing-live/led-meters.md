@@ -10,6 +10,10 @@ Every audio input and output has an LED that shows signal level at a glance, wit
 | -1dB to 0dB | Red |
 | 0dB (clipping) | Strong blinking red |
 
+<!-- IMAGE NEEDED: A close-up photo of the input/output LEDs lit up, ideally showing a couple of the color states from the table above
+     No wiki source found — needs a fresh photo (the wiki describes the LED behavior in text only, no photo found)
+     Suggested: docs/assets/playing-live/led-meters.png -->
+
 Keep outputs mostly green, occasionally yellow, never red — if you're seeing red, back off the source level or the relevant gain stage. See [Troubleshooting](../maintaining/troubleshooting.md) for more on gain staging and noise.
 
 ---
