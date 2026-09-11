@@ -22,6 +22,25 @@ Use this only if the Web UI update path isn't available. From the device: Settin
 
 If the device gets stuck mid-update or won't boot afterward, see [Factory Reset & Reinstall](factory-reset.md) — the Dwarf can always be reinstalled, it isn't software-brickable.
 
+## Trying a test release
+
+!!! warning "Pending implementation — content not final"
+    MOD is preparing a Testing channel: release candidates (for example 1.14 RC1) go out to
+    testers before the final release. Details below describe the plan; confirm against the
+    announcement once the first candidate is published.
+
+Test releases are announced on the MOD forum and by email. There are two ways to get one:
+
+- **Registered device:** if your Dwarf is registered and MOD has added it to the testing
+  group, the candidate shows up in Settings → Reboot & Update like a normal update.
+- **Manual install:** download the candidate image from the announcement and install it
+  from the device: Settings → System Upgrade, then copy the file to the Dwarf when it
+  appears as a USB drive. This is the same path as any manual update.
+
+Going back is the same manual install with the current stable image (1.13.5). The Dwarf
+accepts an older image without complaint. Back up first either way — see
+[Backing Up Before You Update](backups.md).
+
 ---
 
 Next: [Backing Up Before You Update](backups.md)
