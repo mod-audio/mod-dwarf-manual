@@ -1,6 +1,8 @@
-# Maintaining the MOD Dwarf Manual — A Guide for João (or Whoever's Next)
+# Contributing to the MOD Dwarf Manual
 
-Welcome! This document assumes you've never touched this project before. If you get stuck anywhere, that's normal — ask Gianfranco, and consider adding a note here so the next person doesn't hit the same wall.
+This manual is community-maintained. If you use a Dwarf and know something the manual gets wrong, misses, or explains badly — fix it. Small typo corrections and full new sections are both welcome, and both go through the same process: a Pull Request (PR).
+
+This document assumes you've never touched this project before, and never opened a PR anywhere before either. If you get stuck, ask in the [forum thread](https://forum.mod.audio) or open the PR anyway with a note about what you're unsure of — a maintainer will help you get it over the line.
 
 There are two ways to work on this manual, and you don't need to pick just one:
 
@@ -9,33 +11,39 @@ There are two ways to work on this manual, and you don't need to pick just one:
 
 Start with Easy mode. Move to Terminal mode whenever a change feels big enough that you'd like to double-check it first.
 
+Every page on the live site also has a small pencil icon (top right of the content) that jumps straight to that page's "Easy mode" edit screen on GitHub — the fastest way in if you've just spotted something wrong while reading.
+
 ## A few words you'll run into
 
 - **Repository (or "repo")** — the project folder itself, including its full history. This one lives at `github.com/mod-audio/mod-dwarf-manual`.
 - **Markdown** — the plain-text format the manual is written in. It looks like normal text with a few symbols (`#` for a heading, `**bold**` for bold). You don't need to learn it all at once — copy the pattern from a page that already looks the way you want.
 - **Commit** — one saved change, with a short message describing what changed. Think of it like a save point.
-- **Push** — sending your commits from your computer up to github.com, where they become real.
+- **Fork** — your own personal copy of the repository on GitHub, which you have full write access to even though you don't have write access to the original. Editing on github.com creates one for you automatically the first time you need it.
+- **Branch** — a named line of work, split off from `main`, that holds your changes until they're reviewed. Keeps your edits separate from everyone else's until they're ready to merge.
+- **Push** — sending your commits from your computer up to your fork on github.com.
+- **Pull Request (PR)** — a request to merge your branch's changes into the real `main` branch. This is where a maintainer reviews your change, may leave comments or ask for tweaks, and eventually clicks "Merge."
 - **Terminal** — the text-based command window on your computer (Terminal on macOS, PowerShell/Git Bash on Windows). Only needed for Terminal mode.
 
 ## Easy mode: editing text on github.com
 
-No installation needed. Do this in a web browser, while logged into GitHub.
+No installation needed. Do this in a web browser, while logged into GitHub (any free GitHub account works — you don't need to be part of the `mod-audio` org).
 
-1. Go to `github.com/mod-audio/mod-dwarf-manual` and open the `docs` folder, then click through to the file you want to change (they're organized by section — `getting-started`, `playing-live`, and so on, matching the manual itself).
+1. Go to `github.com/mod-audio/mod-dwarf-manual` and open the `docs` folder, then click through to the file you want to change (they're organized by section — `getting-started`, `playing-live`, and so on, matching the manual itself). Or, from the live site, click the pencil icon on the page you're reading to jump straight here.
 2. Click the **pencil icon** (top-right of the file view) to edit it.
 3. Make your change directly in the text box. It's plain text, so just type normally.
-4. Scroll down to "Commit changes." Write a short, plain description of what you changed (e.g. "Fix typo in tuner instructions").
-5. Click "Commit directly to the `main` branch," then the green "Commit changes" button.
+4. Scroll down to "Propose changes." Write a short, plain description of what you changed (e.g. "Fix typo in tuner instructions").
+5. Click **"Propose changes."** GitHub automatically creates your own fork of the repo and a branch for you — you don't need to set any of that up by hand.
+6. You'll land on a "Comparing changes" screen. Click **"Create pull request,"** add a sentence or two if useful, then **"Create pull request"** again to confirm.
 
-That's it — within a minute or two, the live site updates automatically. No extra step required.
+That's it — your PR is now open and a maintainer will review it. See "Opening a Pull Request" below for what happens next.
 
 ## Easy mode: adding an image on github.com
 
 1. In the repo, navigate into `docs/assets/`, then into the subfolder for the relevant section (e.g. `docs/assets/playing-live/`). If the subfolder doesn't exist yet, you can create it in step 2 by typing a folder name before the file name.
 2. Click **Add file → Upload files** (top right).
 3. Drag your image in, or click to browse for it. Give it a clear, descriptive filename before uploading if you can — lowercase, words separated by dashes, like `tuner-tool-screen.png` — rather than whatever cryptic name it came with.
-4. Commit the upload the same way as a text change (see above).
-5. Now go edit the Markdown page where the image should appear (same process as above) and add this line wherever you want it to show up:
+4. Scroll down to "Propose changes" and follow the same steps as above (4–6) to open a PR with the upload.
+5. Now go edit the Markdown page where the image should appear (same process as above, in the same PR or a follow-up one) and add this line wherever you want it to show up:
 
    ```
    ![Short description of the image](../assets/playing-live/tuner-tool-screen.png)
@@ -47,19 +55,24 @@ That's it — within a minute or two, the live site updates automatically. No ex
 
 Do this once, on whichever computer you'll be working from.
 
-You need two programs installed: **git** and **Python 3**. If you're not sure whether you have them, open a terminal and type `git --version` and `python3 --version` — if you see a version number back, you're set; if you see "command not found," install them first (Gianfranco or a search for "install git on Mac/Windows" will get you there).
+You need two programs installed: **git** and **Python 3**. If you're not sure whether you have them, open a terminal and type `git --version` and `python3 --version` — if you see a version number back, you're set; if you see "command not found," install them first (a search for "install git on Mac/Windows" will get you there).
+
+If you don't already have push access to `mod-audio/mod-dwarf-manual` (most contributors won't, and that's expected), start by **forking** it: click "Fork" at the top of `github.com/mod-audio/mod-dwarf-manual`, which creates `github.com/YOUR-USERNAME/mod-dwarf-manual` under your own account. Everything below happens against your fork.
 
 Then, in the terminal:
 
 ```bash
-git clone git@github.com:mod-audio/mod-dwarf-manual.git
+git clone git@github.com:YOUR-USERNAME/mod-dwarf-manual.git
 cd mod-dwarf-manual
+git remote add upstream git@github.com:mod-audio/mod-dwarf-manual.git
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-What this does, line by line: downloads a copy of the repo to your computer; moves your terminal into that folder; creates an isolated space for this project's tools so they don't interfere with anything else on your machine; switches into that space; installs the tools the manual needs to build a preview.
+What this does, line by line: downloads a copy of *your fork* to your computer; moves your terminal into that folder; adds the original `mod-audio` repo as a second remote called `upstream`, so you can pull in other people's merged changes later; creates an isolated space for this project's tools so they don't interfere with anything else on your machine; switches into that space; installs the tools the manual needs to build a preview.
+
+(If you're a maintainer with direct push access, you can skip the fork and clone `mod-audio/mod-dwarf-manual` directly — everything else below is the same, except you'll push branches to `origin` instead of a fork.)
 
 Every time you come back to work in a new terminal window, re-run just this one line first:
 
@@ -70,17 +83,29 @@ source .venv/bin/activate
 ## Terminal mode: making a change
 
 1. Make sure you've run `source .venv/bin/activate` (see above).
-2. Open the file you want to edit in any text editor (VS Code, TextEdit, whatever you're comfortable with) — it's just `docs/...` followed by the section and filename.
-3. Preview your change before anyone else sees it: run `mkdocs serve`, then open `http://127.0.0.1:8000` in your browser. The preview updates automatically each time you save the file.
-4. Once it looks right, press Ctrl+C in the terminal to stop the preview, then run these three commands:
+2. Create a branch for your change, named for what it does: `git checkout -b fix-tuner-typo`.
+3. Open the file you want to edit in any text editor (VS Code, TextEdit, whatever you're comfortable with) — it's just `docs/...` followed by the section and filename.
+4. Preview your change before anyone else sees it: run `mkdocs serve`, then open `http://127.0.0.1:8000` in your browser. The preview updates automatically each time you save the file.
+5. Once it looks right, press Ctrl+C in the terminal to stop the preview, then run these three commands:
 
    ```bash
    git add -A
    git commit -m "describe what you changed here"
-   git push
+   git push -u origin fix-tuner-typo
    ```
 
-5. On github.com, click the "Actions" tab and wait for a green checkmark — that means the live site has finished updating. Then check the real site to confirm.
+   (Swap `fix-tuner-typo` for whatever you named your branch in step 2.)
+
+6. GitHub will print a URL in the terminal output for opening a PR — follow it, or go to `github.com/mod-audio/mod-dwarf-manual/pulls` and click "New pull request." Pick your branch, add a short description, and click "Create pull request."
+
+## Opening a Pull Request
+
+Once a PR is open:
+
+- An automated check runs `mkdocs build --strict` against it — if you've left a broken link or a bad nav entry, it'll fail loudly here rather than after merging. Fix and push again to the same branch; the PR updates automatically.
+- A maintainer (Gianfranco, João, or whoever's covering review that week) will read through the diff, possibly leave comments or ask for a small change, and merge it once it's ready.
+- Once merged into `main`, GitHub Actions builds and deploys automatically — the live site updates within a minute or two.
+- Small, focused PRs (one page, one fix, one new section) get reviewed faster than large ones bundling unrelated changes. If you're planning something big — a new section, a restructure — consider opening an issue or posting in the forum thread first to check it's the direction the manual should go before you put in the work.
 
 ## Adding a brand new page
 
@@ -161,27 +186,27 @@ For each: take the photo/screenshot, upload it to the suggested path under `docs
 
 ## Every OS release
 
-This is what actually keeps the manual accurate over time. When a new Dwarf OS version ships, work through this list:
+This is what actually keeps the manual accurate over time — and it doesn't have to be one person's job. Anyone can pick off one item from this list in a PR after a release; you don't need to do the whole sweep.
 
 1. **Read what changed** in the release — new features, bug fixes, anything visual.
 2. **Write up anything new.** Check for pages marked "Pending implementation" (search for that phrase across the `docs/` folder) — if the feature just shipped, replace the placeholder with real, verified content.
 3. **Re-check flagged pages.** Search for "Needs SME confirmation" — if you or someone with the device can now confirm those details, do so and remove the flag.
 4. **Look at screenshots** on any page whose on-screen UI changed. Nothing will warn you automatically here — it just needs a look. Also worth a search for "IMAGE NEEDED" — if the release added or changed a screen that already has a marker, this is a natural time to knock a few out.
 5. **Check nothing describes a feature that's been removed or renamed.**
-6. **Preview before pushing.** Run `mkdocs build --strict` in the terminal — it'll fail loudly if you've left a broken link, which is much better to catch now than after it's live.
-7. **Push, wait for the green checkmark on Actions, spot-check the live site.**
+6. **Preview before opening a PR.** Run `mkdocs build --strict` in the terminal — it'll fail loudly if you've left a broken link, which is much better to catch now than after review. (A PR against `mod-audio/main` also gets this check automatically — see "Opening a Pull Request" above.)
+7. **Open the PR, wait for the build check and a maintainer's merge, spot-check the live site once it deploys.**
 
-If ALABS Starless features get merged into an official release, they'll need new pages — that scope hasn't been decided yet, so hold off writing anything for them until Gianfranco confirms what's actually shipping.
+If ALABS Starless features get merged into an official release, they'll need new pages — that scope hasn't been decided yet, so hold off writing anything for them until it's confirmed what's actually shipping (check the forum or ask, per below).
 
 ## Who to ask
 
-- **Should the manual say X, or is this in scope?** — Gianfranco.
-- **Is this technical detail actually correct?** — falkTX, or whoever owns that part of the OS.
+- **Should the manual say X, or is this in scope?** — ask in the [forum thread](https://forum.mod.audio) or open a PR and ask in the description; a maintainer will weigh in during review.
+- **Is this technical detail actually correct?** — falkTX, or whoever owns that part of the OS, or the forum community generally — a lot of Dwarf owners know their corner of it better than any one maintainer does.
 - **Does this match how we talk about the product elsewhere?** — check the forum and marketing material for the same feature.
 
 ## If something feels like you broke it
 
-You didn't, probably. Every change is a commit, which means every past version is still saved — nothing is ever truly lost. If a page looks wrong after you pushed, you can always go back into it and fix it the same way you edited it the first time. When in doubt, ask before worrying.
+You didn't, probably. Every change is a commit, which means every past version is still saved — nothing is ever truly lost. A PR only touches `main` once it's merged, so anything still under review can't break the live site. If a page looks wrong after something merged, open a new PR fixing it the same way you'd propose any other change.
 
 ## Toolchain
 

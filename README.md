@@ -2,6 +2,8 @@
 
 Source for the MOD Dwarf user manual, built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and published to GitHub Pages.
 
+This manual is community-maintained. Found something wrong, outdated, or missing? Contributions are welcome via Pull Request — see **[CONTRIBUTING.md](CONTRIBUTING.md)**, no prior experience with git or PRs required.
+
 ## Local development
 
 ```bash
@@ -21,11 +23,11 @@ Open http://127.0.0.1:8000 to preview.
 
 ## Publishing
 
-Pushes to `main` build and deploy automatically via GitHub Actions (`.github/workflows/deploy.yml`) to GitHub Pages.
+Pushes to `main` (i.e. merged PRs) build and deploy automatically via GitHub Actions (`.github/workflows/deploy.yml`) to GitHub Pages. Open pull requests get a separate check (`.github/workflows/pr-check.yml`) that builds the site in strict mode without deploying, to catch broken links before merge.
 
-## Maintenance
+## Contributing
 
-See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the full guide: local setup, how to edit and add pages, the writing style, image handling, and the checklist to work through on every OS release.
+See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the full guide: opening a Pull Request (no git experience assumed), local setup, how to edit and add pages, the writing style, image handling, and the checklist to work through on every OS release.
 
 ## Toolchain note
 
