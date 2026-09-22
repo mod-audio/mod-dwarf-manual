@@ -24,18 +24,22 @@ If the device gets stuck mid-update or won't boot afterward, see [Factory Reset 
 
 ## Trying a test release
 
-!!! warning "Pending implementation — content not final"
-    MOD is preparing a Testing channel: release candidates (for example 1.14 RC1) go out to
-    testers before the final release. Details below describe the plan; confirm against the
-    announcement once the first candidate is published.
+Release candidates go out to testers before each final release. The first ones, the
+1.14 candidates, were published on the MOD forum in September 2026 and were installed the
+way described here.
 
-Test releases are announced on the MOD forum and by email. There are two ways to get one:
+Test releases are announced on the MOD forum and by email. Each one has its own forum topic
+with the download links and checksums. You install it by hand:
 
-- **Registered device:** if your Dwarf is registered and MOD has added it to the testing
-  group, the candidate shows up in Settings → Reboot & Update like a normal update.
-- **Manual install:** download the candidate image from the announcement and install it
-  from the device: Settings → System Upgrade, then copy the file to the Dwarf when it
-  appears as a USB drive. This is the same path as any manual update.
+1. Make sure the Dwarf is already on **1.13.5** — earlier versions cannot install a test
+   release file.
+2. Download the file for the Dwarf from the announcement.
+3. On the device: Settings → System Upgrade, then copy the file to the Dwarf when it appears
+   as a USB drive. This is the same path as any manual update.
+
+A test release does not show up in Settings → Reboot & Update on its own: that panel only
+offers the stable release. The "Report a problem" button in the Web UI opens the test
+release's forum topic with your device details ready to paste.
 
 Going back is the same manual install with the current stable image (1.13.5). The Dwarf
 accepts an older image without complaint. Back up first either way — see
