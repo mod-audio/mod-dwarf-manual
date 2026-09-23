@@ -1,6 +1,6 @@
 # Contributing to the MOD Dwarf Manual
 
-This manual is community-maintained. If you use a Dwarf and know something the manual gets wrong, misses, or explains badly — fix it. Small typo corrections and full new sections are both welcome, and both go through the same process: a Pull Request (PR).
+This manual is community-maintained. If you use a Dwarf and know something the manual gets wrong, misses, or explains badly, you can fix it. Small typo corrections and full new sections are both welcome, and both go through the same process: a Pull Request (PR).
 
 This document assumes you've never touched this project before, and never opened a PR anywhere before either. If you get stuck, ask in the [forum thread](https://forum.mod.audio) or open the PR anyway with a note about what you're unsure of — a maintainer will help you get it over the line.
 
