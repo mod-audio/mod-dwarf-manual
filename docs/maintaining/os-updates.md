@@ -24,9 +24,13 @@ If the device gets stuck mid-update or won't boot afterward, see [Factory Reset 
 
 ## Trying a test release
 
-Release candidates go out to testers before each final release. The first ones, the
-1.14 candidates, were published on the MOD forum in September 2026 and were installed the
-way described here.
+Release candidates go out to testers before each final release, installed the way described
+here.
+
+!!! info "New in 1.14"
+    The test-release program started with the 1.14 candidates, published on the MOD forum in
+    September 2026 — on 1.13.5 and earlier, there was no way to try a release before it went
+    stable.
 
 Test releases are announced on the MOD forum and by email. Each one has its own forum topic
 with the download links and checksums. You install it by hand:

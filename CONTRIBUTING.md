@@ -141,6 +141,30 @@ Or for a feature that hasn't shipped yet:
 
 These show up as an orange callout box on the page, so nobody mistakes it for confirmed fact. Once you've verified it against a real device, rewrite the section properly and delete the box.
 
+### Marking version-specific content
+
+The manual describes one continuous product, but the OS moves — a feature can arrive, change behavior, or (rarely) disappear between releases. Someone reading on an older, still-supported version shouldn't be told about a feature they don't have as if it's just how the Dwarf works.
+
+**The default is: don't tag anything.** Most content is stable across versions and reads fine without a version note cluttering it. Reach for a tag only when a reader on a different version would be genuinely misled without one.
+
+For a feature or behavior that only exists from a given release onward:
+
+```
+!!! info "New in 1.14"
+    One or two sentences on what's new and, if relevant, what the older behavior was.
+```
+
+For behavior that changed rather than simply arriving new:
+
+```
+!!! warning "Changed in 1.14"
+    What used to happen, what happens now, and why it matters that someone on an older version notices this.
+```
+
+A `New in` tag isn't the same thing as `Pending implementation` (above) — `Pending implementation` is for writing ahead of a feature that hasn't shipped yet and might still change; `New in X.XX` is for confirmed, shipped behavior that simply hasn't been true for the whole life of the product. When a `Pending implementation` feature ships, replace the flag with real content, and only add a `New in` tag on top of that if it's genuinely useful for someone reading on an older release — most of the time, once something has been out a couple of releases, it's just "how it works" and the tag should come out. Don't let tags accumulate forever; pruning stale ones is part of "Every OS release" below.
+
+**Which version is "current"?** The front page (`docs/index.md`) states which release the manual assumes as its baseline. If you're documenting something that only applies from a later release than that baseline, tag it. If you're not sure what the current baseline is, check `docs/index.md` first.
+
 ## Getting images from the old wiki
 
 The old wiki (`wiki.mod.audio`) has plenty of existing photos and diagrams of the Dwarf that are perfectly reusable here — no need to take new ones from scratch for things that haven't changed.
@@ -189,12 +213,14 @@ For each: take the photo/screenshot, upload it to the suggested path under `docs
 This is what actually keeps the manual accurate over time — and it doesn't have to be one person's job. Anyone can pick off one item from this list in a PR after a release; you don't need to do the whole sweep.
 
 1. **Read what changed** in the release — new features, bug fixes, anything visual.
-2. **Write up anything new.** Check for pages marked "Pending implementation" (search for that phrase across the `docs/` folder) — if the feature just shipped, replace the placeholder with real, verified content.
-3. **Re-check flagged pages.** Search for "Needs SME confirmation" — if you or someone with the device can now confirm those details, do so and remove the flag.
-4. **Look at screenshots** on any page whose on-screen UI changed. Nothing will warn you automatically here — it just needs a look. Also worth a search for "IMAGE NEEDED" — if the release added or changed a screen that already has a marker, this is a natural time to knock a few out.
-5. **Check nothing describes a feature that's been removed or renamed.**
-6. **Preview before opening a PR.** Run `mkdocs build --strict` in the terminal — it'll fail loudly if you've left a broken link, which is much better to catch now than after review. (A PR against `mod-audio/main` also gets this check automatically — see "Opening a Pull Request" above.)
-7. **Open the PR, wait for the build check and a maintainer's merge, spot-check the live site once it deploys.**
+2. **Update the baseline in `docs/index.md`** to the new version number, if this release is now the stable one everyone's expected to be on.
+3. **Write up anything new.** Check for pages marked "Pending implementation" (search for that phrase across the `docs/` folder) — if the feature just shipped, replace the placeholder with real, verified content. Tag genuinely new-since-last-release behavior with `New in X.XX` (see "Marking version-specific content" above) if a reader on the previous version would be confused without it.
+4. **Prune stale version tags.** Search for `New in` and `Changed in` — if a tag is now a couple of releases old and just describes normal current behavior, remove the tag and fold the text into the regular prose.
+5. **Re-check flagged pages.** Search for "Needs SME confirmation" — if you or someone with the device can now confirm those details, do so and remove the flag.
+6. **Look at screenshots** on any page whose on-screen UI changed. Nothing will warn you automatically here — it just needs a look. Also worth a search for "IMAGE NEEDED" — if the release added or changed a screen that already has a marker, this is a natural time to knock a few out.
+7. **Check nothing describes a feature that's been removed or renamed.**
+8. **Preview before opening a PR.** Run `mkdocs build --strict` in the terminal — it'll fail loudly if you've left a broken link, which is much better to catch now than after review. (A PR against `mod-audio/main` also gets this check automatically — see "Opening a Pull Request" above.)
+9. **Open the PR, wait for the build check and a maintainer's merge, spot-check the live site once it deploys.**
 
 If ALABS Starless features get merged into an official release, they'll need new pages — that scope hasn't been decided yet, so hold off writing anything for them until it's confirmed what's actually shipping (check the forum or ask, per below).
 
