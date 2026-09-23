@@ -36,10 +36,16 @@ Test releases are announced on the MOD forum and by email. Each one has its own 
 with the download links and checksums. You install it by hand:
 
 1. Make sure the Dwarf is already on **1.13.5** — earlier versions cannot install a test
-   release file.
+   release file. If it is on an older version, install 1.13.5 first from the
+   [Releases](https://wiki.mod.audio/wiki/Releases) page (same manual path), then the test
+   release.
 2. Download the file for the Dwarf from the announcement.
 3. On the device: Settings → System Upgrade, then copy the file to the Dwarf when it appears
    as a USB drive. This is the same path as any manual update.
+
+If the screen briefly shows **"invalid file"** and then goes back to asking for the file to be
+copied, the Dwarf is on a version older than 1.13.5. Nothing has been changed on the device —
+install 1.13.5 first, then try again.
 
 A test release does not show up in Settings → Reboot & Update on its own: that panel only
 offers the stable release. The "Report a problem" button in the Web UI opens the test
