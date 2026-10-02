@@ -89,6 +89,7 @@ nav:
       - Control Chain Devices: connecting-gear/control-chain.md
       - Bluetooth: connecting-gear/bluetooth.md
       - USB Host Devices: connecting-gear/usb-host.md
+      - USB Audio: connecting-gear/usb-audio.md
   - Settings & Configuration:
       - Audio I/O & Headphone: settings/audio-io.md
       - MIDI Settings: settings/midi.md

@@ -10,7 +10,8 @@ No input or output: check the corresponding LEDs light up, check your cables, an
 
 - **No input, no LED**: check [input gain](../settings/audio-io.md).
 - **No output, no LED**: make sure your pedalboard actually connects to the output ports, try loading a factory pedalboard to isolate the issue, check you're not running a trial plugin that's dropping audio, check CPU/RAM isn't maxed out, check output gain.
-- **No headphone audio**: check headphone volume in [Settings](../settings/audio-io.md).
+- **Output LED lights up, but no sound**: the output LEDs show the level inside the pedalboard, before the output volume. Check Audio Outputs in [Settings](../settings/audio-io.md): if it is turned far down, the LEDs still light up (even red) and nothing comes out.
+- **No headphone audio**: check headphone volume in [Settings](../settings/audio-io.md). The headphones are fed after the output volume, so check Audio Outputs too.
 
 ## USB / Web UI access
 

@@ -16,4 +16,4 @@ If a connected MIDI controller isn't recognized, or the device becomes unstable 
 
 ---
 
-Next: [Settings & Configuration](../settings/audio-io.md)
+Next: [USB Audio](usb-audio.md)
