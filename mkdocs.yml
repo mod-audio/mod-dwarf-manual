@@ -3,6 +3,7 @@ site_url: https://docs.mod.audio/dwarf/
 repo_url: https://github.com/mod-audio/mod-dwarf-manual
 repo_name: mod-audio/mod-dwarf-manual
 edit_uri: edit/main/docs/
+copyright: "The MOD logo is a registered trademark (EU trade mark no. 016228827; UK trade mark no. UK00916228827)."
 
 theme:
   name: material
@@ -105,3 +106,4 @@ nav:
       - MIDI Implementation: reference/midi-implementation.md
       - Glossary: reference/glossary.md
       - Safety & Compliance: reference/safety-compliance.md
+      - Legal Notices: reference/legal.md
