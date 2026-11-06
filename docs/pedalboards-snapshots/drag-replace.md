@@ -1,20 +1,31 @@
 # Drag & Replace Plugin
 
-!!! warning "Pending implementation — content not final"
-    This feature is on the OS backlog and hasn't shipped yet. The description below reflects the intended behavior from the feature spec, not a verified device. Rewrite this page against the real UI once it ships, and confirm the IO type mapping (FX, Instrument, MIDI, Meter, Audio-generator, MIDI-generator) with the dev team before publishing.
+!!! info "New in 1.14"
+    On earlier releases, swapping a plugin meant removing it, adding the new one and drawing the cables again.
 
-Drag & replace lets you swap one plugin for another in a pedalboard by dropping the new plugin directly on top of the one you want to replace — without manually rebuilding the connections around it.
+Drag & replace swaps one plugin on your pedalboard for another, keeping the cables around it.
 
-The intent is that dropping a compatible plugin onto an existing one:
+1. In the Web UI, find the new plugin in the [Plugins Bar](../first-pedalboard/building.md).
+2. Drag it onto the plugin you want to replace. When the drop will work, the plugin on the board is highlighted.
+3. Let go. The old plugin is removed, the new one takes its place, and the audio and MIDI cables are connected again.
 
-1. Removes the old plugin.
-2. Inserts the new one in its place.
-3. Reconnects the surrounding audio/MIDI/CV cables automatically, based on matching IO types.
+## Which plugins can replace each other
 
-Replacement only makes sense between plugins of compatible IO type (for example, an FX plugin for another FX plugin, an Instrument for another Instrument) — dropping a Meter onto an Audio-generator, for instance, wouldn't have a sensible connection mapping. The exact rules for which types are considered compatible are still being finalized.
+Only plugins of the same kind:
+
+- a mono effect (one audio input, one audio output) for another mono effect;
+- a stereo effect (two audio inputs and two audio outputs) for another stereo effect;
+- an instrument (MIDI in, audio out) for another instrument;
+- a MIDI effect (MIDI in, MIDI out) for another MIDI effect.
+
+If the plugin on the board is not highlighted, the two are not the same kind: add the new plugin next to it instead.
+
+## What carries over
+
+- **Audio and MIDI cables** are reconnected by position: what went into the old plugin's first input goes into the new plugin's first input, and so on. If the new plugin has fewer inputs or outputs, the extra cables are left out, and the Web UI shows "Failed to automatically reconnect all ports" if some could not be made.
+- **CV cables, knob settings and control assignments** do not carry over: the new plugin starts from its own defaults. Set it up and assign its controls again, then save the pedalboard.
 
 <!-- IMAGE NEEDED: A before/after screenshot of dragging a replacement plugin onto an existing one
-     No wiki source — feature hasn't shipped yet. Screenshot once it's implemented and this page's "Pending implementation" flag is lifted.
      Suggested: docs/assets/pedalboards-snapshots/drag-replace.png -->
 
 ---
