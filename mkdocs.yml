@@ -85,6 +85,11 @@ nav:
       - Backup & Restore: pedalboards-snapshots/backup-restore.md
       - Using CV (Control Voltage): pedalboards-snapshots/using-cv.md
       - Modular Synth Basics: pedalboards-snapshots/modular-synth-basics.md
+  - Plugins & Files:
+      - Loading Files into Plugins: plugins-files/plugin-files.md
+      - Getting Tones from TONE3000: plugins-files/tone3000.md
+      - Grouped Plugin Controls: plugins-files/grouped-controls.md
+      - Easy Spin Programs: plugins-files/easy-spin.md
   - Connecting Gear:
       - MIDI Controllers & Expression Pedals: connecting-gear/midi-expression.md
       - Control Chain Devices: connecting-gear/control-chain.md
@@ -99,6 +104,7 @@ nav:
   - Updating & Maintaining:
       - Installing OS Updates: maintaining/os-updates.md
       - Backing Up Before You Update: maintaining/backups.md
+      - Reporting a Problem: maintaining/report-problem.md
       - Troubleshooting: maintaining/troubleshooting.md
       - Factory Reset & Reinstall: maintaining/factory-reset.md
   - Reference:
