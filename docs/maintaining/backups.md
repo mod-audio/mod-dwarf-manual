@@ -8,4 +8,4 @@ Once you've confirmed the update or reset went smoothly, you can restore from th
 
 ---
 
-Next: [Troubleshooting](troubleshooting.md)
+Next: [Reporting a Problem](report-problem.md)

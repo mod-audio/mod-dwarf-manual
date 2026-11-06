@@ -84,4 +84,4 @@ The community has shared full synth pedalboards built this way — worth loading
 
 ---
 
-Next: [Connecting Gear](../connecting-gear/midi-expression.md)
+Next: [Loading Files into Plugins](../plugins-files/plugin-files.md)
