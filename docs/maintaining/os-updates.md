@@ -51,7 +51,7 @@ A test release does not show up in Settings → Reboot & Update on its own: that
 offers the stable release. The "Report a problem" button in the Web UI opens the test
 release's forum topic with your device details ready to paste.
 
-Going back is the same manual install with the current stable image (1.13.5). The Dwarf
+Going back is the same manual install with an earlier image (for example 1.13.5). The Dwarf
 accepts an older image without complaint. Back up first either way — see
 [Backing Up Before You Update](backups.md).
 
