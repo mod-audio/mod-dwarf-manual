@@ -1,7 +1,7 @@
 # USB Audio (Dwarf as an Audio Interface)
 
-!!! warning "Pending implementation — content not final"
-    The port names on this page ("USB From Computer", "USB To Computer") arrive with MOD OS 1.14, which is a test release for now (1.14 RC4). On 1.13.5 the same ports are called "USB Audio Capture" and "USB Audio Playback". Remove this box once 1.14 is the stable release.
+!!! warning "Changed in 1.14"
+    The port names on this page ("USB From Computer", "USB To Computer") are new in MOD OS 1.14. On 1.13.5 the same ports are called "USB Audio Capture" and "USB Audio Playback".
 
 With USB audio turned on, the Dwarf shows up on your computer as a sound card, over the same USB cable you use for the Web UI. You can play sound from the computer into a pedalboard, and record a pedalboard on the computer. It carries two channels in each direction, at 48 kHz.
 
@@ -29,7 +29,7 @@ They work like any other input or output: nothing happens until you draw a cable
 ## What your computer calls the Dwarf
 
 !!! warning "Needs SME confirmation"
-    Names checked on macOS and on one Linux desktop with MOD OS 1.14 RC4. Windows has not been checked. Proper names are planned for a later release; update this table when they ship.
+    Names checked on macOS and on one Linux desktop with MOD OS 1.14. Windows has not been checked. Proper names are planned for a later release; update this table when they ship.
 
 | Computer | Name you will see |
 |---|---|

@@ -14,7 +14,7 @@ This manual is organized around what you're trying to do, not around the device'
 
 ## About this manual
 
-This manual describes **MOD OS 1.13.5**, the current stable release, unless a page says otherwise. Content that only applies from a specific later release is marked inline, for example:
+This manual describes **MOD OS 1.14**, the current stable release, unless a page says otherwise. Content that only applies from a specific later release is marked inline, for example:
 
 !!! info "New in 1.14"
     An example of how version-specific content is flagged — see [Installing OS Updates](maintaining/os-updates.md) for a real one, in the "Trying a test release" section.
