@@ -18,7 +18,7 @@ The Dwarf has two independent 6.35mm TRS audio inputs, unbalanced, with configur
 
 ## Audio out
 
-Two independent 6.35mm TRS audio outputs, balanced or unbalanced, with configurable output gain per output (0dB to -127dB). Connect these to your amp, interface, or monitors.
+Two independent 6.35mm TRS audio outputs, balanced or unbalanced, with configurable output gain per output (0dB to -127dB; maximum level +9.4dBu balanced, +3.5dBu unbalanced). Connect these to your amp, interface, or monitors.
 
 ## Headphones
 
