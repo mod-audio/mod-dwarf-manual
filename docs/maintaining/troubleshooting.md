@@ -37,7 +37,15 @@ If you're getting noise when connecting the Dwarf to other gear, it may be a gro
 
 ![The CPU/RAM usage monitor in the Web UI status bar](../assets/maintaining/Gui-23.png)
 
-Keep CPU usage under 80% to avoid audio dropouts (X-runs). If you're running close to the limit: avoid long series chains of plugins (they're all pinned to one CPU core — Portal Sink/Source plugins can split a chain across cores), try reducing buffer size in Advanced Settings, or swap a CPU-heavy plugin (reverbs, delays, amp/IR modeling) for a lighter alternative from the Plugin Store.
+Keep CPU usage under 80% to avoid audio dropouts (X-runs). If you're running close to the limit:
+
+- Find the plugins that cost the most: from 1.15, click the CPU bar for the [Plugin CPU Usage](../pedalboards-snapshots/cpu-buffer.md) window.
+- Split long series chains of plugins: a chain runs on one CPU core at a time. From 1.15 the [Buffer block](../pedalboards-snapshots/cpu-buffer.md#the-buffer-block) splits it across cores; on 1.14, use the Portal Sink/Source plugins.
+- Try a bigger buffer size (256 frames): from 1.15 in Settings → Audio (see [Buffer size](../settings/web-ui-settings.md#buffer-size)), on 1.14 with "Use 256 frames as Buffer Size" in Settings → Advanced. If you run at 64 frames, go back to 128 first.
+- Swap a CPU-heavy plugin (reverbs, delays, amp/IR modeling) for a lighter alternative from the Plugin Store.
+
+!!! warning "Pending implementation — content not final"
+    MOD OS 1.15 (a test release for now, 1.15 RC1) removes most of the dropouts the Dwarf had while you edit a pedalboard: adding, removing or swapping plugins, connecting cables and saving. On 1.14, a short dropout while editing a heavy pedalboard is expected. Remove this box once 1.15 is the stable release.
 
 ## Get help
 

@@ -12,7 +12,7 @@ Try reflashing the display controller first — this can happen if power was los
 ![The "Dangerous" section of the Web UI's Advanced Settings, showing the reflash controller option (1/2)](../assets/maintaining/MOD_WebGUI_Settings_Dangerous.png)
 ![The "Dangerous" section of the Web UI's Advanced Settings, showing the reflash controller option (2/2)](../assets/maintaining/MOD_WebGUI_Advanced_Settings.png)
 
-- **Via Web UI**: open the advanced settings page (bottom-right of Settings), go to the "Dangerous" section, follow the "Reflash controller" instructions.
+- **Via Web UI**: on 1.14, open the advanced settings page (bottom-right of Settings), go to the "Dangerous" section, follow the "Reflash controller" instructions. From 1.15 it is in Settings → **Maintenance** → Reflash controller (see [Web UI Settings](../settings/web-ui-settings.md#maintenance)).
 - **Via SSH**: connect to `192.168.51.1` (user `root`, password `mod`), run `hmi-update /usr/share/mod/controller/mod*controller.bin`, wait for confirmation, then power-cycle.
 
 ## If the device won't boot at all

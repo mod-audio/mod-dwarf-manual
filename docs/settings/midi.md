@@ -6,6 +6,9 @@
 
 Set the device's clock source: Internal, MIDI, or Ableton Link — and whether the Dwarf sends a clock signal out. This is the same clock source selectable from the [Tempo tool](../playing-live/tool-mode.md).
 
+!!! warning "Pending implementation — content not final"
+    MOD OS 1.15, a test release for now (1.15 RC1), improves following an external MIDI clock: the tempo locks to the incoming clock instead of wandering around it. Remove this box once 1.15 is the stable release.
+
 ## MIDI
 
 ![The MIDI settings screen](../assets/settings/Dwarf_MIDIMenu.png)

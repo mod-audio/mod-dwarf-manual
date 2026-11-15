@@ -5,7 +5,7 @@
 
 Found a bug, or something that does not behave as it should? The **Report a problem** button gathers the details a good report needs, for you to post on the MOD forum.
 
-1. In the Web UI, click **Report a problem** in the bar at the bottom of the screen. (It is also in Settings.)
+1. In the Web UI, click **Report a problem** in the bar at the bottom of the screen. (It is also in Settings; from 1.15 under Settings → Maintenance.)
 2. A window opens with a block of text. Write at the top what you did, what you expected and what happened.
 3. Click **Copy to clipboard**.
 4. Click **Open the forum topic** and paste the text as a reply.

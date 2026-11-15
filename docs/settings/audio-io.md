@@ -8,6 +8,9 @@ Reach these from the device: press the Menu button, then the center button, to o
 
 ## Analog Inputs
 
+!!! warning "Pending implementation — content not final"
+    The gain range, the dBu readout and the menu name ANALOG INPUTS arrive with MOD OS 1.15, which is a test release for now (1.15 RC1). On 1.14 the menu is called Audio Inputs and the gain goes from -12dB to +25dB, with no dBu readout. Remove this box once 1.15 is the stable release.
+
 ![The Analog Inputs settings screen](../assets/settings/Dwarf_AudioInputsMenu.png)
 
 <!-- IMAGE NEEDED: The ANALOG INPUTS screen of MOD OS 1.15, showing the gain and the max input level in dBu under it -->
@@ -76,6 +79,9 @@ A built-in noise gate, per input or both simultaneously (or off). Configurable t
 
 ## Analog Outputs
 
+!!! warning "Pending implementation — content not final"
+    The maximum output level readout in dBu and the menu name ANALOG OUTPUTS arrive with MOD OS 1.15, which is a test release for now (1.15 RC1). On 1.14 the menu is called Audio Outputs and shows the volume in dB. Remove this box once 1.15 is the stable release.
+
 ![The Analog Outputs settings screen](../assets/settings/Dwarf_AudioOutputsMenu.png)
 
 <!-- IMAGE NEEDED: The ANALOG OUTPUTS screen of MOD OS 1.15, showing OUT-1 MAX LEVEL in dBu TS -->
@@ -126,4 +132,4 @@ A built-in compressor with three intensities (light, mild, heavy) or off, plus a
 
 ---
 
-Next: [MIDI Settings](midi.md)
+Next: [Web UI Settings](web-ui-settings.md)

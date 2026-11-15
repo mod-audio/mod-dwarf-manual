@@ -18,6 +18,8 @@ This manual describes **MOD OS 1.14**, the current stable release. Where somethi
 
 If your Dwarf is on an older release (for example 1.13.5) and a page doesn't match what you see, look for one of these boxes, or [update the Dwarf](maintaining/os-updates.md).
 
+**MOD OS 1.15** is the next release, a test release for now (1.15 RC1, see [Trying a test release](maintaining/os-updates.md#trying-a-test-release)). What it adds or changes is already in this manual, each time in an orange box marked **Pending implementation — content not final** that says what 1.14 does instead. The main additions: [Performance view](playing-live/performance-view.md), [Editing a Pedalboard](pedalboards-snapshots/editing.md), the [CPU monitor and the Buffer block](pedalboards-snapshots/cpu-buffer.md), the new [Web UI Settings](settings/web-ui-settings.md) with 64 frames, [Backup & Restore](pedalboards-snapshots/backup-restore.md), [Sharing Presets & Pedalboards](plugins-files/sharing.md) and the [input gain and output levels](settings/audio-io.md).
+
 Pages generated as placeholders are marked with a "Status: outline stub" note — if you land on one of those, that section hasn't been written yet.
 
 Source: [github.com/mod-audio/mod-dwarf-manual](https://github.com/mod-audio/mod-dwarf-manual)

@@ -47,6 +47,23 @@ Use meter plugins (like Level Meter) between stages to check whether a plugin is
 
 Open the Plugin Store (from the mode selector) to browse or search. Click a plugin, then Install — it's added to your Plugins Bar, ready to drag into a pedalboard.
 
+### Filtering the list
+
+!!! warning "Pending implementation — content not final"
+    The filter buttons arrive with MOD OS 1.15, which is a test release for now (1.15 RC1). On 1.14 the Plugin Store has "Installed only" and "Non-Installed only" checkboxes and a Featured carousel at the top. Remove this box once 1.15 is the stable release.
+
+![The three rows of filter buttons in the Plugin Store](../assets/first-pedalboard/plugin-store-filters.png)
+
+Under **Filter**, three rows of buttons narrow down the list:
+
+- **All | Installed | Not installed**: everything, only what is on your Dwarf, or only what you don't have yet.
+- **Official | Beta | Both**: this row only shows when **Show beta plugins in the Store** is on (Settings → Developer, see [Web UI Settings](../settings/web-ui-settings.md#developer)). Without it, only official plugins are listed.
+- **Free | Paid | Both**.
+
+The list starts on All, Official and Both. Your choices stay while the Web UI is open, also when you close and reopen the store; reloading the page sets them back.
+
+Two buttons, **Install All** and **Update All**, install every plugin in the list or update every installed plugin that has a new version. They only show when you turn them on in Settings → User Interface.
+
 ![A newly installed plugin sitting in the Plugins Bar, ready to drag in](../assets/first-pedalboard/GxQuack_PluginsBar.png)
 
 Most plugins are free; paid ones offer a trial (audio will randomly drop out during trial use — that's expected, not a bug) before you buy.
