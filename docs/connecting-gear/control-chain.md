@@ -15,9 +15,14 @@ Once a Control Chain device is connected, it appears as an option in the assignm
 
 Control Chain is an open protocol, so it's also possible to build your own peripherals for it — see the [Arduino Shield](https://github.com/mod-audio/cc-hw-arduino-shield) as a starting point.
 
-<!-- IMAGE NEEDED / CONTENT GAP: The wiki has a "Device Updates" panel (Web UI Settings → Advanced → Device Updates, for updating connected Control Chain peripherals' own firmware) that this page doesn't mention at all yet — worth a short section once someone confirms the current flow on a real device.
-     Wiki source: https://wiki.mod.audio/images/2/22/Device-updates.png (from "MOD Web GUI User Guide")
-     Suggested: docs/assets/connecting-gear/control-chain-device-updates.png -->
+## Firmware updates
+
+Control Chain devices have their own firmware. The Web UI lists the devices it knows under **Settings → Updates → Control Chain Firmware**, each with the latest firmware version and an **Update firmware** button. Some devices, like the Arduino Shield, are updated by hand instead: the list says so.
+
+!!! warning "Pending implementation — content not final"
+    MOD OS 1.15, a test release for now (1.15 RC1), moves this list into the Updates tab. On 1.14 it is in its own Settings tab, **Device Updates**. Remove this box once 1.15 is the stable release.
+
+![The Control Chain Firmware list in Settings → Updates](../assets/settings/web-settings-updates.png)
 
 ---
 

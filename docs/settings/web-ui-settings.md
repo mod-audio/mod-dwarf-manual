@@ -13,6 +13,8 @@ The page has seven tabs, listed on the left: Device, Audio, User Interface, Upda
 
 ## Device
 
+![The Device tab of the MOD Settings page](../assets/settings/web-settings-device.png)
+
 Information about your Dwarf: unit, build date, OS version, kernel, and the audio engine's current **buffer size**, sample rate and DSP load. Also here:
 
 - **Use custom Bluetooth device name**: the name your computer or phone sees when pairing (see [Bluetooth](../connecting-gear/bluetooth.md)).
@@ -25,8 +27,7 @@ Information about your Dwarf: unit, build date, OS version, kernel, and the audi
 
 ### Buffer size
 
-<!-- IMAGE NEEDED: Settings → Audio of MOD OS 1.15 with the Buffer Size choices 64 / 128 (default) / 256 frames
-     Suggested: docs/assets/settings/web-settings-buffer-size.png -->
+![The Audio tab with the Buffer Size choices](../assets/settings/web-settings-buffer-size.png)
 
 The buffer size is how much audio the Dwarf processes at a time, in frames (samples). Pick one of three:
 
@@ -68,6 +69,8 @@ These switches are off until you turn them on. If you had Developer Mode on in 1
 
 ## Updates
 
+![The Updates tab of the MOD Settings page](../assets/settings/web-settings-updates.png)
+
 - **Installed version** of MOD OS, and the **Update channel** (Stable or Testing). Testing is not honoured by the update server yet: test releases are installed by hand, see [Trying a test release](../maintaining/os-updates.md#trying-a-test-release).
 - **Start update mode**: puts the Dwarf in update mode for a [manual update](../maintaining/os-updates.md#manual-update-maintenance-recovery-path), the same as Settings → System Upgrade on the device.
 - **Control Chain Firmware**: updates for connected [Control Chain devices](../connecting-gear/control-chain.md).
@@ -80,11 +83,15 @@ Backs up your data to a USB stick and restores it. See [Backup & Restore](../ped
 
 ## Developer
 
+![The Developer tab of the MOD Settings page](../assets/settings/web-settings-developer.png)
+
 - **Show beta plugins in the Store**: lists beta plugins in the Plugin Store, with an Official / Beta / Both filter. Beta plugins can be unstable and cause crashes. A pedalboard you share that uses beta plugins only works for people who also accept beta plugins.
 - **JACK Net Manager (EXPERIMENTAL)**: an experimental service. Like every extra service, it uses some CPU: leave it off unless you need it.
 - **Automatically restart controller screen**: tries to detect when the device screen locks up and restarts it. It can get this wrong and restart the screen by mistake. Takes effect after a reboot.
 
 ## Maintenance
+
+![The Maintenance tab of the MOD Settings page](../assets/settings/web-settings-maintenance.png)
 
 - **Report a problem...**: see [Reporting a Problem](../maintaining/report-problem.md).
 - **Reflash controller**: reinstalls the firmware of the device's screen and controls. You type REFLASH to confirm; do not cut the power while it runs. See [Factory Reset & Reinstall](../maintaining/factory-reset.md).

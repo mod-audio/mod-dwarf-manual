@@ -24,8 +24,7 @@ With a mouse, the wheel over the tile row moves to the next or previous tile.
 
 ## Choosing the plugins and their order
 
-<!-- IMAGE NEEDED: The Performance view in edit mode (after the gear icon), with the eye icons on the tiles and the Save button
-     Suggested: docs/assets/playing-live/performance-view-edit.png -->
+![The Performance view in edit mode: an eye icon on each tile (two plugins hidden), a pencil next to each label, and Save at the top right](../assets/playing-live/performance-view-edit.jpg)
 
 Click the gear icon at the top right to enter edit mode. There you can:
 

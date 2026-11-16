@@ -14,8 +14,7 @@ The buttons are off by default. Turn on **Export and Import of presets and pedal
 
 ## Plugin presets
 
-<!-- IMAGE NEEDED: A plugin's settings window with the EXP and IMP buttons in its preset bar
-     Suggested: docs/assets/plugins-files/preset-exp-imp.png -->
+![A plugin's settings window with EXP and IMP in the preset bar](../assets/plugins-files/preset-exp-imp.jpg)
 
 In a plugin's settings window, the preset bar gets two buttons:
 
@@ -28,8 +27,7 @@ When importing, the Dwarf warns you if the preset was made with another version 
 
 ## Pedalboards
 
-<!-- IMAGE NEEDED: The Pedalboards Library with the EXP link on a pedalboard and the "Import pedalboard..." button in the header
-     Suggested: docs/assets/plugins-files/pedalboard-exp-import.png -->
+![The Pedalboards Library with an EXP link on each pedalboard and Import pedalboard... at the top](../assets/plugins-files/pedalboard-exp-import.jpg)
 
 In the Pedalboards Library:
 

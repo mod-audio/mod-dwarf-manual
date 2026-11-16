@@ -37,6 +37,8 @@ When a pedalboard loads, the view is scaled so the whole board fits the window, 
 
 ## Following a cable
 
+![The pointer on an input of the reverb: its cable lights up, the rest of the cables are dimmed](../assets/pedalboards-snapshots/port-hover.jpg)
+
 Hover the mouse over a jack that has cables: all its cables light up, with the jacks at both ends. On a crowded board this is the quickest way to see where a signal comes from and where it goes.
 
 **Right-click** a jack with cables for a small menu:
@@ -50,6 +52,8 @@ With several cables on the jack the items act on all of them: **Split cables**, 
 
 A stereo connection is really two cables, left and right, running side by side. With **Merge stereo cables** on (Settings → User Interface, off by default; see [Web UI Settings](../settings/web-ui-settings.md#user-interface)), the pair is drawn as a single cable that only splits into its two legs at the ends.
 
+![Merge stereo cables on: each stereo pair is drawn as one cable](../assets/pedalboards-snapshots/stereo-cables-on.jpg)
+
 These are merged:
 
 - a stereo pair wired straight across, left to left and right to right;
@@ -61,6 +65,8 @@ A pair wired crossed (left to right, right to left) stays as two cables, so a de
 The Web UI recognises a pair by the port names: ending in L/R or Left/Right, or numbered ports 1-2, 3-4.
 
 ## Cable teleporting
+
+![Split cables: a label box at each output, and four labels arriving at the inputs of the Stereo Gain](../assets/pedalboards-snapshots/teleport-labels.jpg)
 
 A long cable across the whole board makes everything else harder to read. You can **split** it: the connection stays exactly as it was, but instead of a wire across the board you get a short stub with a label box at each end.
 

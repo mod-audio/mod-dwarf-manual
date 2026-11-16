@@ -21,8 +21,7 @@ The Dwarf checks there is enough free space before it starts, and tells you if t
 
 ![The Settings button in the Web UI status bar](../assets/settings/SettingsButton.png)
 
-<!-- IMAGE NEEDED: Settings → Backup & Restore of MOD OS 1.15, with the three "Also backup/restore ..." checkboxes and the two buttons
-     Suggested: docs/assets/pedalboards-snapshots/backup-restore-panel.png -->
+![The Backup & Restore tab of the MOD Settings page](../assets/pedalboards-snapshots/backup-restore-panel.png)
 
 1. Plug the USB stick into the USB Host port.
 2. In the Web UI, open **Settings → Backup & Restore**.
