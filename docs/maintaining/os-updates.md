@@ -4,13 +4,22 @@ Regular OS updates are installed through the Web UI, not the device menu.
 
 ## From the Web UI (normal path)
 
-<!-- IMAGE NEEDED: The Reboot & Update panel under Web UI Settings → Basic, with the "check for update" / install button
-     No exact wiki source found — the wiki shows the parent "Basic" settings page (https://wiki.mod.audio/images/5/56/MODWebGUI_SettingsPage.png, from "MOD Web GUI User Guide") but not a screenshot of the Reboot & Update panel itself; needs a fresh screenshot of that specific panel
-     Suggested: docs/assets/maintaining/reboot-update-panel.png -->
+<!-- IMAGE NEEDED: The update icon in the bottom bar of the Web UI with its "An update is available" message, and the update window that opens when you click it ("Download" button)
+     No wiki source found — needs a fresh screenshot taken while an update is on offer
+     Suggested: docs/assets/maintaining/update-icon.png -->
 
-1. Open Settings → Reboot & Update.
-2. Follow the prompts to check for and install the latest release.
-3. The device reboots automatically when done.
+The Web UI checks for updates by itself every time you open it. Your computer needs to be
+connected to the internet, and the Dwarf connected by USB — updating over Bluetooth does
+not work.
+
+1. Look at the update icon in the bottom bar of the main screen. When a new release is
+   available it says "An update is available, click to learn more".
+2. Click the icon, then click **Download**.
+3. When the download is complete, click **Upgrade Now**. The Dwarf installs the update
+   and restarts.
+
+There is no "check for updates" button in Settings. From 1.15, Settings → Updates shows the
+installed version and has **Start update mode** for the manual update below.
 
 Back up first — see [Backing Up Before You Update](backups.md).
 
@@ -47,7 +56,7 @@ If the screen briefly shows **"invalid file"** and then goes back to asking for 
 copied, the Dwarf is on a version older than 1.13.5. Nothing has been changed on the device —
 install 1.13.5 first, then try again.
 
-A test release does not show up in Settings → Reboot & Update on its own: that panel only
+A test release does not show up on the update icon on its own: the icon only
 offers the stable release. The "Report a problem" button in the Web UI opens the test
 release's forum topic with your device details ready to paste.
 

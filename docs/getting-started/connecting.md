@@ -14,11 +14,11 @@ Connect the supplied 12V, 2A power adapter to the Dwarf's power jack. Use only t
 
 ![Back panel connections overview — all inputs/outputs/ports labeled](../assets/getting-started/Dwarf_ConnectionsOverview.png)
 
-The Dwarf has two independent 6.35mm TRS audio inputs, unbalanced, with configurable input gain per input (-12dB to +35dB). Plug your instrument or line source into either input. You can adjust input gain later from the device menu — see [Audio I/O & Headphone](../settings/audio-io.md).
+The Dwarf has two independent 6.35mm TRS audio inputs, unbalanced, with configurable input gain per input (0dB to +24dB, clean up to +7.8dBu at 0dB). Plug your instrument or line source into either input. You can adjust input gain later from the device menu — see [Audio I/O & Headphone](../settings/audio-io.md).
 
 ## Audio out
 
-Two independent 6.35mm TRS audio outputs, balanced or unbalanced, with configurable output gain per output (0dB to -127dB). Connect these to your amp, interface, or monitors.
+Two independent 6.35mm TRS audio outputs, balanced or unbalanced, with configurable output gain per output (0dB to -127dB; maximum level +9.4dBu balanced, +3.5dBu unbalanced). Connect these to your amp, interface, or monitors.
 
 ## Headphones
 

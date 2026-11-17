@@ -18,4 +18,4 @@ As with any snapshot change, **re-save the pedalboard** afterward so the new ord
 
 ---
 
-Next: [Drag & Replace Plugin](drag-replace.md)
+Next: [Editing a Pedalboard](editing.md)

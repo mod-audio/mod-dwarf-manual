@@ -13,4 +13,4 @@ Install the Easy Spin plugin from the Plugin Store.
 
 ---
 
-Next: [Connecting Gear](../connecting-gear/midi-expression.md)
+Next: [Sharing Presets & Pedalboards](sharing.md)

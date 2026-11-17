@@ -77,12 +77,15 @@ nav:
       - Controls Overview: playing-live/controls-overview.md
       - Navigation Mode: playing-live/navigation-mode.md
       - Tool Mode - Tuner & Tempo: playing-live/tool-mode.md
+      - Performance View (Web UI): playing-live/performance-view.md
       - LED Meters: playing-live/led-meters.md
   - Working with Pedalboards & Snapshots:
       - Organizing Banks: pedalboards-snapshots/banks.md
       - Managing Snapshots: pedalboards-snapshots/managing-snapshots.md
+      - Editing a Pedalboard: pedalboards-snapshots/editing.md
       - Drag & Replace Plugin: pedalboards-snapshots/drag-replace.md
       - Backup & Restore: pedalboards-snapshots/backup-restore.md
+      - CPU Monitor & Buffer Block: pedalboards-snapshots/cpu-buffer.md
       - Using CV (Control Voltage): pedalboards-snapshots/using-cv.md
       - Modular Synth Basics: pedalboards-snapshots/modular-synth-basics.md
   - Plugins & Files:
@@ -90,6 +93,7 @@ nav:
       - Getting Tones from TONE3000: plugins-files/tone3000.md
       - Grouped Plugin Controls: plugins-files/grouped-controls.md
       - Easy Spin Programs: plugins-files/easy-spin.md
+      - Sharing Presets & Pedalboards: plugins-files/sharing.md
   - Connecting Gear:
       - MIDI Controllers & Expression Pedals: connecting-gear/midi-expression.md
       - Control Chain Devices: connecting-gear/control-chain.md
@@ -98,6 +102,7 @@ nav:
       - USB Audio: connecting-gear/usb-audio.md
   - Settings & Configuration:
       - Audio I/O & Headphone: settings/audio-io.md
+      - Web UI Settings: settings/web-ui-settings.md
       - MIDI Settings: settings/midi.md
       - Menu Items: settings/menu-items.md
       - User Profiles: settings/user-profiles.md

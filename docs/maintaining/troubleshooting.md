@@ -10,8 +10,8 @@ No input or output: check the corresponding LEDs light up, check your cables, an
 
 - **No input, no LED**: check [input gain](../settings/audio-io.md).
 - **No output, no LED**: make sure your pedalboard actually connects to the output ports, try loading a factory pedalboard to isolate the issue, check you're not running a trial plugin that's dropping audio, check CPU/RAM isn't maxed out, check output gain.
-- **Output LED lights up, but no sound**: the output LEDs show the level inside the pedalboard, before the output volume. Check Audio Outputs in [Settings](../settings/audio-io.md): if it is turned far down, the LEDs still light up (even red) and nothing comes out.
-- **No headphone audio**: check headphone volume in [Settings](../settings/audio-io.md). The headphones are fed after the output volume, so check Audio Outputs too.
+- **Output LED lights up, but no sound**: the output LEDs show the level inside the pedalboard, before the output volume. Check Analog Outputs in [Settings](../settings/audio-io.md): if it is turned far down, the LEDs still light up (even red) and nothing comes out.
+- **No headphone audio**: check headphone volume in [Settings](../settings/audio-io.md). The headphones are fed after the output volume, so check Analog Outputs too.
 
 ## USB / Web UI access
 
@@ -37,7 +37,15 @@ If you're getting noise when connecting the Dwarf to other gear, it may be a gro
 
 ![The CPU/RAM usage monitor in the Web UI status bar](../assets/maintaining/Gui-23.png)
 
-Keep CPU usage under 80% to avoid audio dropouts (X-runs). If you're running close to the limit: avoid long series chains of plugins (they're all pinned to one CPU core — Portal Sink/Source plugins can split a chain across cores), try reducing buffer size in Advanced Settings, or swap a CPU-heavy plugin (reverbs, delays, amp/IR modeling) for a lighter alternative from the Plugin Store.
+Keep CPU usage under 80% to avoid audio dropouts (X-runs). If you're running close to the limit:
+
+- Find the plugins that cost the most: from 1.15, click the CPU bar for the [Plugin CPU Usage](../pedalboards-snapshots/cpu-buffer.md) window.
+- Split long series chains of plugins: a chain runs on one CPU core at a time. From 1.15 the [Buffer block](../pedalboards-snapshots/cpu-buffer.md#the-buffer-block) splits it across cores; on 1.14, use the Portal Sink/Source plugins.
+- Try a bigger buffer size (256 frames): from 1.15 in Settings → Audio (see [Buffer size](../settings/web-ui-settings.md#buffer-size)), on 1.14 with "Use 256 frames as Buffer Size" in Settings → Advanced. If you run at 64 frames, go back to 128 first.
+- Swap a CPU-heavy plugin (reverbs, delays, amp/IR modeling) for a lighter alternative from the Plugin Store.
+
+!!! warning "Pending implementation — content not final"
+    MOD OS 1.15 (a test release for now, 1.15 RC1) removes most of the dropouts the Dwarf had while you edit a pedalboard: adding, removing or swapping plugins, connecting cables and saving. On 1.14, a short dropout while editing a heavy pedalboard is expected. Remove this box once 1.15 is the stable release.
 
 ## Get help
 

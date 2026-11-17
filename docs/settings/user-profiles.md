@@ -4,7 +4,7 @@
 
 User Profiles let you save and swap between whole sets of device settings — handy if you use the same Dwarf in different contexts (say, guitar and mic in the studio one day, synth on stage the next) and don't want to re-dial everything by hand each time.
 
-A profile stores: Audio Inputs, Audio Outputs, Headphone Volume, Sync settings, and MIDI settings. You get four profile slots.
+A profile stores: Analog Inputs, Analog Outputs, Headphone Volume, Sync settings, and MIDI settings. You get four profile slots.
 
 ## Switching profiles
 
